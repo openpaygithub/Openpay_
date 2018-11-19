@@ -35,6 +35,16 @@ body {
     background-color: #2864FF;
     border: none;
 }
+
+.searchBar input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #003dda;
+}
+
+.brand h2 {
+    font-size: 16px;
+}
+
 .moreFilters {
     margin-top: 20px;
 }
@@ -94,6 +104,10 @@ body {
     margin: 0 auto;
 }
 
+.promotions.brands .col-4 {
+    text-align: left;
+}
+
 .promotions.brands img {
     height: 64px;
     width: calc(100% - 30px);
@@ -109,15 +123,82 @@ body {
     box-sizing: border-box;
     text-align: center;
 }
+
+.brand {
+    background: #fff;
+    text-align: left;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.brands-search-results {
+    clear: both;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.results-count {
+    position: absolute;
+    right: 0;
+    top: 55px;
+    font-family: Poppins;
+    font-size: 14px;
+}
+
+.brands-search-results h1 {
+    padding: 50px 0 15px;
+    font-size: 20px;
+    color: #3C465A;
+    font-weight: 600;
+}
+
+.brands-search-results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    padding-bottom: 30px;
+}
+
+.brands-load-more {
+    display: flex;
+    justify-content: center;
+}
+
+.brands-load-more button {
+    border: 2px solid black;
+    width: 33%;
+    text-align: center;
+    outline: 0;
+    background: transparent;
+    padding: 10px 0;
+    border-radius: 4px;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+}
+.brands-load-more button:hover {
+    cursor: pointer;
+    box-shadow: 1px 2px 5px 0 rgba(0,0,0,0.5);
+}
+
 .byCategory .marketToProvide {
     height: 120px;
-    width: calc(100% - 30px);
     border: 2px solid #4A4A4A;
     border-radius: 4px;
     background-color: rgba(255,255,255,0);
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
     padding: 20px;
-    margin: 0 auto 30px;
+    margin: 0 30px 30px 0;
+}
+
+.byCategory .marketToProvide:hover,
+.brand:hover {
+    cursor: pointer;
+    box-shadow: 1px 2px 5px 0 rgba(0,0,0,0.5);
 }
 
 .byCategory .marketToProvide h3 {
@@ -125,6 +206,40 @@ body {
     font-size: 20px;
     font-weight: 600;
     line-height: 30px;
+}
+
+.loading-cir {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-cir:after {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    display: block;
+    top: 50%;
+    left: 50%;
+    margin: -5px 0 0 -25px;
+    content: '';
+    border-radius: 50%;
+    animation : loading 1.5s infinite linear;
+}
+
+@keyframes loading {
+    0%   {box-shadow: 60px 0 0 0 #00E1B4, 20px 0 0 0 blue, -20px 0 0 0 #2864FF;}
+    5%   {box-shadow: 60px 0 0 0 #00E1B4, 20px 0 0 0 blue, -20px 0 0 2px #2864FF;}
+    15%   {box-shadow: 60px 0 0 0 #00E1B4, 20px 0 0 0 blue, -20px 0 0 8px #2864FF;}
+    20%   {box-shadow: 60px 0 0 0 #00E1B4, 20px 0 0 2px blue, -20px 0 0 10px #2864FF;}
+    25%   {box-shadow: 60px 0 0 0 #00E1B4, 20px 0 0 8px blue, -20px 0 0 5px #2864FF;}
+    30%   {box-shadow: 60px 0 0 2px #00E1B4, 20px 0 0 10px blue, -20px 0 0 2px #2864FF;}
+    35%   {box-shadow: 60px 0 0 8px #00E1B4, 20px 0 0 5px blue, -20px 0 0 0 #2864FF;}
+    40%   {box-shadow: 60px 0 0 10px #00E1B4, 20px 0 0 2px blue, -20px 0 0 0 #2864FF;}
+    45%   {box-shadow: 60px 0 0 5px #00E1B4, 20px 0 0 0 blue, -20px 0 0 0 #2864FF;}
+    50%   {box-shadow: 60px 0 0 2px #00E1B4, 20px 0 0 0 blue, -20px 0 0 0 #2864FF;}
+    65%   {box-shadow: 60px 0 0 0 #00E1B4, 20px 0 0 0 blue, -20px 0 0 0 #2864FF;}
+    100%  {box-shadow: 60px 0 0 0 #00E1B4, 20px 0 0 0 blue, -20px 0 0 0 #2864FF;}
 }
 
 @media (max-width: 1200px) {
