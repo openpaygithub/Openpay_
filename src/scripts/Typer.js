@@ -61,5 +61,7 @@ runTyper();
 
 $('.marketToProvide').click(function () {
     var CategoryID = $(this).data('value');
-    window.location = 'shop.html?CategoryID='+CategoryID+'&PageSize=21';
+    if (CategoryID) {
+        window.location = 'shop.html?CategoryID='+CategoryID+'&PageSize=21';
+    }
 });
