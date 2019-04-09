@@ -67,7 +67,7 @@ var openpayUtils = (function () {
         var url = path + '/shop-brand?BrandID=' + brand.brandID;
         var item = $('<a class="brand" href="' + url + '"></a>');
         var title = $('<h2>' + brand.brandName +'</h2>');
-        var retailerAvailability = $('<p>'+ availabilityEnum[brand.retailerAvailability] + ' · ' + brand.categoryName + ' · ' + brand.subCategoryName +'</p>');
+        var retailerAvailability = $('<p>'+ availabilityEnum[brand.retailerAvailability] + ' · ' + brand.categoryName'</p>');
 
         item.append(title, retailerAvailability);
 
