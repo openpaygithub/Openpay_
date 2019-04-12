@@ -156,13 +156,24 @@ body {background-color: #fff;}
     font-weight: 600;
 }
 
+.giftsTableList table {
+    border-collapse: collapse;
+}
+  
+.giftsTableList table, tr, td {
+    padding: 8px 25px;
+    border: 1px solid black;
+    font-size: 90%;
+    text-align: center;
+    font-family:"Arial",sans-serif;
+    color:#3C465A;
+}
 
 @media (max-width: 980px) {
     .heroHelpContainer .heroInfo {
         padding: 70px 20px 0;
     }
 }
-
 
 @media (max-width: 680px) {
     .contactUs .col-2 {
