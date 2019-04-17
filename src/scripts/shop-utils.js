@@ -45,8 +45,7 @@ var openpayUtils = (function () {
         if (currentParams.RetailerAvailability) {
             switch (currentParams.RetailerAvailability) {
                 case 'All':
-                    $('#online').prop('checked', true);
-                    $('#in-store').prop('checked', true);
+                    $('#all').prop('checked', true);
                     break;
                 case 'Online':
                     $('#online').prop('checked', true);
@@ -172,12 +171,9 @@ var openpayUtils = (function () {
     }
 
     function getRetailerAvailability() {
-        var isOnline = $('#online').prop('checked');
-        var isInStore = $('#in-store').prop('checked');
-
-        if (isOnline && isInStore) return 'All';
-        if (isOnline) return 'Online';
-        if (isInStore) return 'InStore';
+        if ($('#all').prop('checked')) return 'All';
+        if ($('#online').prop('checked')) return 'Online';
+        if ($('#in-store').prop('checked')) return 'InStore';
 
         return '';
     }
