@@ -194,15 +194,21 @@ body {
     min-height: 330px;
 }
 
-.results-count {
-    margin-top: 10px;
-    color: #3C465A;
-    font-family: Poppins;
-    width: 100%;
-    font-size: 20px;
-    font-weight: 600;
+.results-heading {
+    padding-top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid #DDDEE2;
     margin-bottom: 16px;
+    width: 100%;
+}
+
+.results-count {
+    color: #3C465A;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .brands-search-results h1 {
@@ -449,6 +455,7 @@ body {
 
 .search-box > input:focus {
     border: 2px solid #2864FF;
+    padding-right: 14px;
 }
 
 .search-box > button {
@@ -520,11 +527,11 @@ body {
     outline: none;
 }
 
-.switch-field {
+.switch-availability {
     display: flex;
 }
 
-.switch-field input {
+.switch-availability input {
     position: absolute !important;
     clip: rect(0, 0, 0, 0);
     height: 1px;
@@ -533,7 +540,7 @@ body {
     overflow: hidden;
 }
 
-.switch-field label {
+.switch-availability label {
     color: #3C465A;
     font-family: Poppins;
     font-size: 14px;
@@ -547,22 +554,74 @@ body {
     width: 114px;
 }
 
-.switch-field label:hover {
+.switch-availability label:hover {
     cursor: pointer;
 }
 
-.switch-field input:checked + label {
+.switch-availability input:checked + label {
     background-color: #2864FF;
     color: #fff;
     border-color: transparent;
 }
 
-.switch-field label:first-of-type {
+.switch-availability label:first-of-type {
     border-radius: 4px 0 0 4px;
 }
 
-.switch-field label:last-of-type {
+.switch-availability label:last-of-type {
     border-radius: 0 4px 4px 0;
+}
+
+.switch-view {
+    display: flex;
+}
+
+.switch-view input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+}
+
+.switch-view label {
+    color: #3C465A;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.1s ease-in-out;
+    padding: 16px 4px;
+    margin: 0 4px;
+    border-bottom: 2px solid transparent;
+    display: flex;
+    align-items: flex-end;
+}
+
+.switch-view label:last-child {
+    margin-right: 0;
+}
+
+.switch-view label svg {
+    margin-right: 5px;
+}
+
+.switch-view label:nth-child(4) svg {
+    position: relative;
+    top: -1px;
+}
+
+.switch-view label:hover {
+    cursor: pointer;
+}
+
+.switch-view input:checked + label {
+    color: #2864FF;
+    border-bottom: 2px solid #2864FF;
+}
+
+.switch-view input:checked + label svg {
+    fill: #2864FF;
 }
 
 @keyframes loading {
@@ -645,5 +704,12 @@ body {
     }
     .col-4 {
         width: 100%;
+    }
+
+    .switch-view-title {
+        display: none;
+    }
+    .switch-view label svg {
+        margin-right: 0;
     }
 }

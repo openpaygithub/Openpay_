@@ -38,6 +38,19 @@ var openpayUtils = (function () {
         window.history.pushState({path: path}, '', path);
     }
 
+    function populateFilters() {
+        var currentParams = parseParams(location.search.substring(1));
+        if (currentParams.View === 'Locations') {
+            $('#switch-view #locations').prop('checked', true);
+            $('#post-code-search-box').show();
+            $('#switch-availability').hide();
+        } else {
+            $('#switch-view #list').prop('checked', true);
+            $('#post-code-search-box').hide();
+            $('#switch-availability').show();
+        }
+    }
+
     function populateControls() {
         var currentParams = parseParams(location.search.substring(1));
         if (currentParams.CategoryID) $('#category').val(currentParams.CategoryID);
@@ -58,6 +71,7 @@ var openpayUtils = (function () {
                     break;
             }
         }
+        populateFilters();
         if (currentParams.SuburbName) $('#city').val(currentParams.SuburbName);
     }
 
@@ -178,8 +192,21 @@ var openpayUtils = (function () {
         return '';
     }
 
+    function getView() {
+        if ($('#switch-view #list').prop('checked')) return 'List';
+        if ($('#switch-view #locations').prop('checked')) return 'Locations';
+
+        return '';
+    }
+
     function handleChangeRetailerAvailability() {
         modifySearchParams({RetailerAvailability: getRetailerAvailability()});
+        searchBrands();
+    }
+
+    function handleChangeView() {
+        modifySearchParams({ View: getView() });
+        populateFilters();
         searchBrands();
     }
 
@@ -294,6 +321,7 @@ var openpayUtils = (function () {
         modifySearchParams: modifySearchParams,
         searchBrands: searchBrands,
         handleChangeRetailerAvailability: handleChangeRetailerAvailability,
+        handleChangeView: handleChangeView,
         parseParams: parseParams,
         populateControls: populateControls,
         fetchCurrentBrand: fetchCurrentBrand,

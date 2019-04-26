@@ -127,13 +127,17 @@
                     <option value="209005">Home &amp; Garden</option>
                 </select>
             </div>
-            <div class="switch-field">
-                <input type="radio" id="all" name="switch-two" value="all" />
+            <div class="switch-availability" id="switch-availability">
+                <input type="radio" id="all" name="switch-availability" value="all" />
                 <label for="all">All</label>
-                <input type="radio" id="online" name="switch-two" value="online" />
+                <input type="radio" id="online" name="switch-availability" value="online" />
                 <label for="online">Online</label>
-                <input type="radio" id="in-store" name="switch-two" value="in-store" />
+                <input type="radio" id="in-store" name="switch-availability" value="in-store" />
                 <label for="in-store">In-Store</label>
+            </div>
+            <div class="search-box" id="post-code-search-box">
+                <input type="text" name="post-code" placeholder="Enter a postcode" id="post-code">
+                <button id="post-code-update-btn">Update</button>
             </div>
         </div>
     </div>
@@ -207,7 +211,29 @@
     </div>
     <div class="brands-search-results greyPane" id="search-results">
         <div class="bodyContainer">
-            <h1 class="results-count"><span id="search-results-count">120</span> results</h1>
+            <div class="results-heading">
+                <h2 class="results-count"><span id="search-results-count">120</span> results</h2>
+                <div class="results-view-switch">
+                    <div class="switch-view" id="switch-view">
+                        <input type="radio" name="switch-view" id="list" value="list" />
+                        <label for="list">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                                <path d="M19 5v14H5V5h14m1-2H4L3 4v16l1 1h16l1-1V4l-1-1zm-9 4h6v2h-6V7zm0 4h6v2h-6v-2zm0 4h6v2h-6zM7 7h2v2H7zm0 4h2v2H7zm0 4h2v2H7z"/>
+                                <path fill="none" d="M0 0h24v24H0z"/>
+                            </svg>
+                            <span class="switch-view-title">List</span>
+                        </label>
+                        <input type="radio" name="switch-view" id="locations" value="locations" />
+                        <label for="locations">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                                <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                            </svg>
+                            <span class="switch-view-title">Locations</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
             <div class="clear"></div>
             <div class="brands-search-results-grid" id="results"></div>
             <div class="loading-cir" id="loader"></div>

@@ -29,6 +29,8 @@ $('#categories-grid').on('click', '.marketToProvide', function (e) {
 $('#all').click(openpayUtils.handleChangeRetailerAvailability);
 $('#online').click(openpayUtils.handleChangeRetailerAvailability);
 $('#in-store').click(openpayUtils.handleChangeRetailerAvailability);
+$('#switch-view #list').click(openpayUtils.handleChangeView);
+$('#switch-view #locations').click(openpayUtils.handleChangeView);
 $('#load-more').click(function () {
     openpayUtils.searchBrands({loadMore: true})
 });
