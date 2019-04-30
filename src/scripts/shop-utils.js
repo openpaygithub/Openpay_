@@ -30,6 +30,15 @@ var openpayUtils = (function () {
         }, {});
     }
 
+    function stringifyParams(obj) {
+        return Object.keys(obj).reduce(function (acc, key) {
+            console.log(acc);
+            var prefix = (acc === '' ? '' : '&');
+
+            return acc + prefix + key + '=' + obj[key];
+        }, '');
+    }
+
     function modifySearchParams(patch) {
         if (!history.pushState || !Object.assign) return console.error('Update your browser');
 
@@ -123,7 +132,7 @@ var openpayUtils = (function () {
         var item = $('<a class="brand" href="' + url + '"></a>');
         var title = $('<h2>' + retailer.brandName +'</h2>');
         var locationAddress = $('<div class="location-address">' + getDistance(retailer) + ' · ' + getAddress(retailer) +'</div>');
-        var category = $('<div class="location-category-name">Category</div>');
+        var category = $('<div class="location-category-name">' + retailer.categoryName +'</div>');
 
         item.append(title, locationAddress, category);
 
@@ -196,11 +205,12 @@ var openpayUtils = (function () {
         }
 
         var currentParams = parseParams(location.search.substring(1));
+        delete currentParams.Postcode;
 
         $('#search-results-heading').text(getSearchResultsHeading(currentParams.CategoryID));
 
         $.ajax({
-            url: API_HOST + API_BRANDS + '?' + location.search.substring(1)
+            url: API_HOST + API_BRANDS + '?' + stringifyParams(currentParams),
         }).done(function (payload) {
             $('#loader').hide();
             $('#search-results-count').text(payload.total);
@@ -257,11 +267,11 @@ var openpayUtils = (function () {
         return '';
     }
 
-    function search() {
+    function search(options) {
         if (getView() === 'Locations') {
-            searchRetailers()
+            searchRetailers(options)
         } else {
-            searchBrands();
+            searchBrands(options);
         }
     }
 
