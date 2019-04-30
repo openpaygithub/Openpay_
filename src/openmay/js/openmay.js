@@ -13,28 +13,28 @@
  *  @home  the array containing all promotions in the home category
  */
 const featured = [
-    ['#', './images/PNG/Featured/Featured_Openmay.png'],
-    ['https://skinnytan.com.au', './images/PNG/Featured/featured_retail_skinny_tan.png'],
-    ['https://tomsaustralia.com.au/', './images/PNG/Featured/featured_retail_toms.png']
+    ['#', '/images/PNG/Featured/Featured_Openmay.png'],
+    ['https://skinnytan.com.au', '/images/PNG/Featured/featured_retail_skinny_tan.png'],
+    ['https://tomsaustralia.com.au/', '/images/PNG/Featured/featured_retail_toms.png']
 ];
 const retail = [
-    ['https://www.backyardcatenclosures.com.au/', './images/PNG/retail_backyard_kitten_palaces.png'],
-    ['https://charlesandlee.com/', './images/PNG/retail_charles_and_lee.png'],
-    ['https://www.backyardchickencoops.com.au/', './images/PNG/retail_Chicken_coops.png'],
-    ['https://timbuk2.com.au/', './images/PNG/retail_timbuk2.png'],
-    ['https://tomsaustralia.com.au/', './images/PNG/retail_Toms.png'],
-    ['https://skinnytan.com.au', './images/PNG/Featured/featured_retail_skinny_tan.png']
+    ['https://www.backyardcatenclosures.com.au/', '/images/PNG/retail_backyard_kitten_palaces.png'],
+    ['https://charlesandlee.com/', '/images/PNG/retail_charles_and_lee.png'],
+    ['https://www.backyardchickencoops.com.au/', '/images/PNG/retail_Chicken_coops.png'],
+    ['https://timbuk2.com.au/', '/images/PNG/retail_timbuk2.png'],
+    ['https://tomsaustralia.com.au/', '/images/PNG/retail_Toms.png'],
+    ['https://skinnytan.com.au', '/images/PNG/Featured/featured_retail_skinny_tan.png']
 ];
 const automotive = [
-    ['http://autobahn.net.au/', './images/PNG/auto_autobahn.png'],
-    ['https://www.ultratune.com.au/', './images/PNG/auto_UltraTune.png'],
-    ['https://www.openpay.com.au/', './images/PNG/auto_generic.png']
+    ['http://autobahn.net.au/', '/images/PNG/auto_autobahn.png'],
+    ['https://www.ultratune.com.au/', '/images/PNG/auto_UltraTune.png'],
+    ['https://www.openpay.com.au/', '/images/PNG/auto_generic.png']
 ];
 const home = [
-    ['https://ihealthsaunas.com.au/', './images/PNG/home_iHealth.png'],
-    ['https://bedsrus.com.au/', './images/PNG/home_bedsrus.png'],
-    ['https://www.lincraft.com.au/', './images/PNG/home_Lincraft.png'],
-    ['https://myhouse.com.au/', './images/PNG/home_MyHouse.png'],
+    ['https://ihealthsaunas.com.au/', '/images/PNG/home_iHealth.png'],
+    ['https://bedsrus.com.au/', '/images/PNG/home_bedsrus.png'],
+    ['https://www.lincraft.com.au/', '/images/PNG/home_Lincraft.png'],
+    ['https://myhouse.com.au/', '/images/PNG/home_MyHouse.png'],
 ];
 
 /**
@@ -42,7 +42,7 @@ const home = [
  * Iterates through a 2D array and generates:
  *   <div>
  *      <a href="array[n][0]" target="_blank">
- *        <img src="array[n][1]">
+ *        <img src="path">
  *      </a>
  *   </div>
  *   ...
@@ -52,13 +52,16 @@ const home = [
  */
 function createCarouselImages(parentElement, array) {
     let parent = document.getElementById(parentElement);
+    console.log('creating images');
     array.forEach(element => {
         let child = document.createElement('div');
         let img = document.createElement('img');
         let link = document.createElement('a');
+        let path = "../../openmay/" + element[1];
+        console.log(path);
         link.setAttribute('href', element[0]);
         link.setAttribute('target', '_blank');
-        img.setAttribute('src', element[1]);
+        img.setAttribute('src', path);
         img.className = "img-fluid promo-card";
         link.appendChild(img);
         child.appendChild(link);
