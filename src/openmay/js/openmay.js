@@ -5,7 +5,7 @@
 /**
  * Arrays for the items on each of the promo category. Each array is a 2 dimensional array. 
  * For each sub-array, the first item (array [n][0]) is a link and the second (array [n][1]) is the path to the image.
- * Change these arrays to update the cards.
+ * Change these arrays to update the cards, leave the first value as null if the image is a placeholder.
  * 
  *  @featured the array containing the featured promotion
  *  @retail the array containing all promotions in the retail category
@@ -13,7 +13,7 @@
  *  @home  the array containing all promotions in the home category
  */
 const featured = [
-    ['#', '/images/PNG/Featured/Featured_Openmay.png'],
+    [null, '/images/PNG/Featured/Featured_Openmay.png'],
     ['https://skinnytan.com.au', '/images/PNG/Featured/featured_retail_skinny_tan.png'],
     ['https://tomsaustralia.com.au/', '/images/PNG/Featured/featured_retail_toms.png']
 ];
@@ -56,11 +56,12 @@ function createCarouselImages(parentElement, array) {
     array.forEach(element => {
         let child = document.createElement('div');
         let img = document.createElement('img');
-        let link = document.createElement('a');
         let path = "../../openmay/" + element[1];
-        console.log(path);
-        link.setAttribute('href', element[0]);
-        link.setAttribute('target', '_blank');
+        let link = document.createElement('a');
+        if (element[0] !== null) {
+            link.setAttribute('href', element[0]);
+            link.setAttribute('target', '_blank');
+        }
         img.setAttribute('src', path);
         img.className = "img-fluid promo-card";
         link.appendChild(img);
@@ -69,32 +70,69 @@ function createCarouselImages(parentElement, array) {
     });
 }
 
-createCarouselImages('featured', featured);
-createCarouselImages('retail', retail);
-createCarouselImages('automotive', automotive);
-createCarouselImages('home', home);
+/**
+ * Function to create the images for the front page to keep the featured promotion in sync with the mainpage.
+ * Iterates only the first 3 items of the featured array and generates the card.
+ */
+
+function createFrontPagePromo() {
+    let parent = document.getElementById("promotion");
+    let array;
+    if (featured.length > 3) {
+        array = featured.slice(0, 3);
+    } else {
+        array = featured;
+    }
+    array.forEach(element => {
+        let child = document.createElement('div');
+        let img = document.createElement('img');
+        let path = "/openmay/" + element[1];
+        let link = document.createElement('a');
+        if (element[0] === null) {
+            link.setAttribute('href', '/openmay');
+        } else {
+            link.setAttribute('href', element[0]);
+        }
+        img.className = 'promo-card';
+        img.setAttribute('src', path);
+        link.appendChild(img);
+        child.appendChild(link);
+        parent.appendChild(child);
+    })
+}
+
 
 /**
- * jQuery to initialize the carousel.
+ * Initializes the OpenMay webpage - creates the carousels and kickstarts the slick library
  */
-$(document).ready(function () {
-    $('.multiple-items').slick({
-        autoplay: true,
-        autoplaySpeed: 5000,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        dots: true,
-        responsive: [{
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
-            },
-            breakpoint: 560,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }]
+
+function initOpenmay() {
+    createCarouselImages('featured', featured);
+    createCarouselImages('retail', retail);
+    createCarouselImages('automotive', automotive);
+    createCarouselImages('home', home);
+    /**
+     * jQuery to initialize the carousel.
+     */
+    $(document).ready(function () {
+        $('.multiple-items').slick({
+            autoplay: true,
+            autoplaySpeed: 5000,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            dots: true,
+            responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                },
+                breakpoint: 560,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }]
+        });
     });
-});
+}
