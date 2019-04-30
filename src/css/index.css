@@ -341,8 +341,8 @@ body {
 }
 
 .promo-card {
-    max-width: 360px;
-    margin: 5px;
+    max-width: 320px;
+    padding: 10px;
 }
 
 
@@ -369,14 +369,6 @@ body {
 
 @media (max-width: 980px) {
 
-    #promotion {
-        flex-direction: column;
-    }
-
-    .promo-card {
-        max-width: 420px;
-    }
-
     .promotions .col-3,
     .howItWorks .col-3 {
         width: 100%;
@@ -399,5 +391,21 @@ body {
 
     .downloadApp h1 {
         font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #promotion {
+        flex-direction: column; 
+    }
+    .promo-card {
+        max-width: 360px;
+    }
+}
+
+@media (max-width: 360px) {
+    .promo-card {
+        max-width: 300px;
     }
 }
