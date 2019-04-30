@@ -6,6 +6,23 @@
     <title>OpenMay</title>
     <link rel="shortcut icon" type="image/png" href="/images/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TF3JKHF');
+    </script>
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -13,7 +30,7 @@
     <link rel="stylesheet" type="text/css" href="../openmay/css/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="../openmay/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../openmay/css/styles.css">
-	<link rel="shortcut icon" type="image/png" href="./images/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 
 </head>
 
@@ -44,7 +61,8 @@
                         </li>
                     </ul>
                 </div>
-                <a href="https://retailer.myopenpay.com.au/live/Account/Login/" target="_blank" class="nav-link hide-mobile">Merchant log in</a>
+                <a href="https://retailer.myopenpay.com.au/live/Account/Login/" target="_blank"
+                    class="nav-link hide-mobile">Merchant log in</a>
             </nav>
         </div>
     </div>
@@ -183,5 +201,9 @@
 <script>
     initOpenmay();
 </script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TF3JKHF" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 </html>

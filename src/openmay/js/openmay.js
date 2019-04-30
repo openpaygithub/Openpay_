@@ -103,7 +103,7 @@ function createFrontPagePromo() {
 
 
 /**
- * Initializes the OpenMay webpage - creates the carousels and kickstarts the slick library
+ * Initializes the OpenMay webpage - creates the carousels and kickstarts the slick
  */
 
 function initOpenmay() {
