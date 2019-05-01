@@ -75,7 +75,6 @@ function createCarouselImages(parentElement, array) {
  * Function to create the images for the front page to keep the featured promotion in sync with the mainpage.
  * Iterates only the first 3 items of the featured array and generates the card.
  */
-
 function createFrontPagePromo() {
     let parent = document.getElementById("promotion");
     let array;

@@ -304,3 +304,4 @@ var openpayUtils = (function () {
         fetchCurrentRetailer: fetchCurrentRetailer
     }
 })();
+
