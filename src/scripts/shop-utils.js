@@ -105,7 +105,7 @@ var openpayUtils = (function () {
         var path = window.location.protocol + "//" + window.location.host + window.location.pathname.split('/').slice(0, -1).join('/');
         var url = [path, '/shop-retailer?BrandID=', params.BrandID, '&RetailerID=', retailer.retailerLocationID].join('');
         var item = $('<a class="brand" href="' + url + '"></a>');
-        var title = $('<h2>' + retailer.brandName +'</h2>');
+        var title = $('<h2>' + (params.BrandID == 'SkFYIFR5cmVz' ? retailer.locationName : retailer.brandName) +'</h2>');
         var retailerAvailability = $('<p>' + getDistance(retailer) + ' · ' + getAddress(retailer) +'</p>');
         var direction = $('<div class="retailer-direction">Directions</div>');
 
