@@ -19,12 +19,12 @@ const featured = [
 ];
 const retail = [
     ['https://www.backyardcatenclosures.com.au/', '/images/JPG/retail/backyard kitten palaces.jpg'],
-    ['https://charlesandlee.com/', '/images/JPG/retail/charles and lee.jpg'],
+    ['https://charlesandlee.com/collections/sets', '/images/JPG/retail/charles and lee.jpg'],
     ['https://www.backyardchickencoops.com.au/', '/images/JPG/retail/chicken coops.jpg'],
     ['https://timbuk2.com.au/', '/images/JPG/retail/timbuk2.jpg'],
     ['https://tomsaustralia.com.au/', '/images/JPG/retail/toms.jpg'],
     ['https://www.greggrantsaddlery.com.au/', '/images/JPG/retail/gregsaddelry.jpg'],
-    ['https://skinnytan.com.au', '/images/JPG/retail/skinny tan.jpg'],
+    ['https://skinnytan.com.au/collections/4-for-40', '/images/JPG/retail/skinny tan.jpg'],
     ['https://www.rodneyclark.com/', '/images/JPG/retail/rodney clark.jpg'],
     ['https://www.pethouse.com.au/', '/images/JPG/retail/pet house.jpg'],
     ['https://www.lincraft.com.au/', '/images/JPG/retail/lincraft.jpg']
