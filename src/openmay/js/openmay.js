@@ -14,28 +14,34 @@
  */
 const featured = [
     [null, '/images/JPG/featured/openmay.jpg'],
-    ['https://skinnytan.com.au', '/images/JPG/featured/skinny tan.jpg'],
+    ['http://auto.openpay.com.au/', '/images/JPG/auto/generic.jpg'],
     ['https://tomsaustralia.com.au/', '/images/JPG/featured/toms.jpg']
 ];
 const retail = [
     ['https://www.backyardcatenclosures.com.au/', '/images/JPG/retail/backyard kitten palaces.jpg'],
-    ['https://charlesandlee.com/', '/images/JPG/retail/charles and lee.jpg'],
+    ['https://charlesandlee.com/collections/sets', '/images/JPG/retail/charles and lee.jpg'],
     ['https://www.backyardchickencoops.com.au/', '/images/JPG/retail/chicken coops.jpg'],
     ['https://timbuk2.com.au/', '/images/JPG/retail/timbuk2.jpg'],
     ['https://tomsaustralia.com.au/', '/images/JPG/retail/toms.jpg'],
     ['https://www.greggrantsaddlery.com.au/', '/images/JPG/retail/gregsaddelry.jpg'],
-    ['https://skinnytan.com.au', '/images/JPG/retail/skinny tan.jpg']
+    ['https://skinnytan.com.au/collections/4-for-40', '/images/JPG/retail/skinny tan.jpg'],
+    ['https://www.rodneyclark.com/', '/images/JPG/retail/rodney clark.jpg'],
+    ['https://www.pethouse.com.au/', '/images/JPG/retail/pet house.jpg'],
+    ['https://www.lincraft.com.au/', '/images/JPG/retail/lincraft.jpg']
 ];
 const automotive = [
     ['http://autobahn.net.au/', '/images/JPG/auto/autobahn.jpg'],
     ['https://www.ultratune.com.au/', '/images/JPG/auto/ultratune.jpg'],
-    [null, '/images/JPG/auto/generic.jpg']
+    ['http://auto.openpay.com.au/', '/images/JPG/auto/generic.jpg'],
 ];
 const home = [
     ['https://ihealthsaunas.com.au/', '/images/JPG/home/ihealth.jpg'],
     ['https://bedsrus.com.au/', '/images/JPG/home/bedsrus.jpg'],
     ['https://www.robinskitchen.com.au/', '/images/JPG/home/robins.jpg'],
     ['https://myhouse.com.au/', '/images/JPG/home/myhouse.jpg'],
+    ['https://www.house.com.au/','/images/JPG/home/house.jpg'],
+    ['https://www.spotlightstores.com/custommade','/images/JPG/home/m2m.jpg'],
+    ['https://omegahomeservices.com.au/','/images/JPG/home/omega.jpg']
 ];
 
 /**
@@ -103,7 +109,7 @@ function createFrontPagePromo() {
 
 
 /**
- * Initializes the OpenMay webpage - creates the carousels and kickstarts the slick
+ * Initializes the OpenMay webpage - creates the carousels and kickstarts the slick.js
  */
 
 function initOpenmay() {
