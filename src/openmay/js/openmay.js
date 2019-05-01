@@ -13,28 +13,29 @@
  *  @home  the array containing all promotions in the home category
  */
 const featured = [
-    [null, '/images/PNG/Featured/Featured_Openmay.png'],
-    ['https://skinnytan.com.au', '/images/PNG/Featured/featured_retail_skinny_tan.png'],
-    ['https://tomsaustralia.com.au/', '/images/PNG/Featured/featured_retail_toms.png']
+    [null, '/images/JPG/featured/openmay.jpg'],
+    ['https://skinnytan.com.au', '/images/JPG/featured/skinny tan.jpg'],
+    ['https://tomsaustralia.com.au/', '/images/JPG/featured/toms.jpg']
 ];
 const retail = [
-    ['https://www.backyardcatenclosures.com.au/', '/images/PNG/retail_backyard_kitten_palaces.png'],
-    ['https://charlesandlee.com/', '/images/PNG/retail_charles_and_lee.png'],
-    ['https://www.backyardchickencoops.com.au/', '/images/PNG/retail_Chicken_coops.png'],
-    ['https://timbuk2.com.au/', '/images/PNG/retail_timbuk2.png'],
-    ['https://tomsaustralia.com.au/', '/images/PNG/retail_Toms.png'],
-    ['https://skinnytan.com.au', '/images/PNG/Featured/featured_retail_skinny_tan.png']
+    ['https://www.backyardcatenclosures.com.au/', '/images/JPG/retail/backyard kitten palaces.jpg'],
+    ['https://charlesandlee.com/', '/images/JPG/retail/charles and lee.jpg'],
+    ['https://www.backyardchickencoops.com.au/', '/images/JPG/retail/chicken coops.jpg'],
+    ['https://timbuk2.com.au/', '/images/JPG/retail/timbuk2.jpg'],
+    ['https://tomsaustralia.com.au/', '/images/JPG/retail/toms.jpg'],
+    ['https://www.greggrantsaddlery.com.au/', '/images/JPG/retail/gregsaddelry.jpg'],
+    ['https://skinnytan.com.au', '/images/JPG/retail/skinny tan.jpg']
 ];
 const automotive = [
-    ['http://autobahn.net.au/', '/images/PNG/auto_autobahn.png'],
-    ['https://www.ultratune.com.au/', '/images/PNG/auto_UltraTune.png'],
-    ['https://www.openpay.com.au/', '/images/PNG/auto_generic.png']
+    ['http://autobahn.net.au/', '/images/JPG/auto/autobahn.jpg'],
+    ['https://www.ultratune.com.au/', '/images/JPG/auto/ultratune.jpg'],
+    [null, '/images/JPG/auto/generic.jpg']
 ];
 const home = [
-    ['https://ihealthsaunas.com.au/', '/images/PNG/home_iHealth.png'],
-    ['https://bedsrus.com.au/', '/images/PNG/home_bedsrus.png'],
-    ['https://www.lincraft.com.au/', '/images/PNG/home_Lincraft.png'],
-    ['https://myhouse.com.au/', '/images/PNG/home_MyHouse.png'],
+    ['https://ihealthsaunas.com.au/', '/images/JPG/home/ihealth.jpg'],
+    ['https://bedsrus.com.au/', '/images/JPG/home/bedsrus.jpg'],
+    ['https://www.lincraft.com.au/', '/images/JPG/home/lincraft.jpg'],
+    ['https://myhouse.com.au/', '/images/JPG/home/myhouse.jpg'],
 ];
 
 /**
@@ -116,23 +117,27 @@ function initOpenmay() {
      */
     $(document).ready(function () {
         $('.multiple-items').slick({
+            lazyLoad: 'ondemand',
             autoplay: true,
             autoplaySpeed: 5000,
             slidesToShow: 3,
             slidesToScroll: 3,
             dots: true,
             responsive: [{
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
                 },
-                breakpoint: 560,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
                 }
-            }]
+            ]
         });
     });
 }
