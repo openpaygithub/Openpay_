@@ -32,7 +32,6 @@ var openpayUtils = (function () {
 
     function stringifyParams(obj) {
         return Object.keys(obj).reduce(function (acc, key) {
-            console.log(acc);
             var prefix = (acc === '' ? '' : '&');
 
             return acc + prefix + key + '=' + obj[key];
@@ -128,7 +127,7 @@ var openpayUtils = (function () {
     function createRetailerLocationItem(retailer) {
         var params = parseParams(location.search.substring(1));
         var path = window.location.protocol + "//" + window.location.host + window.location.pathname.split('/').slice(0, -1).join('/');
-        var url = [path, '/shop-retailer?BrandID=', params.BrandID, '&RetailerID=', retailer.retailerLocationID].join('');
+        var url = [path, '/shop-retailer?BrandID=', retailer.brandID, '&RetailerID=', retailer.retailerLocationID].join('');
         var item = $('<a class="brand" href="' + url + '"></a>');
         var title = $('<h2>' + retailer.brandName +'</h2>');
         var locationAddress = $('<div class="location-address">' + getDistance(retailer) + ' · ' + getAddress(retailer) +'</div>');
