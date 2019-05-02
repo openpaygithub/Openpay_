@@ -1,20 +1,25 @@
 $('#category').change(function (e) {
     openpayUtils.modifySearchParams({CategoryID: e.currentTarget.value});
-    openpayUtils.searchBrands();
+    openpayUtils.search();
 });
 
 $('#city').change(function (e) {
     openpayUtils.modifySearchParams({SuburbName: e.currentTarget.value});
-    openpayUtils.searchBrands();
+    openpayUtils.search();
 });
 
 $('#query').change(function (e) {
     openpayUtils.modifySearchParams({Keyword: e.currentTarget.value});
-    openpayUtils.searchBrands();
+    openpayUtils.search();
 });
 
-$('#search-btn').click(function () {
-    openpayUtils.searchBrands();
+$('#post-code').change(function (e) {
+    openpayUtils.modifySearchParams({Postcode: e.currentTarget.value});
+    openpayUtils.search();
+});
+
+$('#search-btn, #post-code-update-btn').click(function () {
+    openpayUtils.search();
 });
 
 $('#categories-grid').on('click', '.marketToProvide', function (e) {
@@ -22,15 +27,17 @@ $('#categories-grid').on('click', '.marketToProvide', function (e) {
 
     if (CategoryID) {
         openpayUtils.modifySearchParams({CategoryID: CategoryID});
-        openpayUtils.searchBrands();
+        openpayUtils.search();
         $("#category").val(CategoryID);
     }
 });
-
+$('#all').click(openpayUtils.handleChangeRetailerAvailability);
 $('#online').click(openpayUtils.handleChangeRetailerAvailability);
 $('#in-store').click(openpayUtils.handleChangeRetailerAvailability);
+$('#switch-view #list').click(openpayUtils.handleChangeView);
+$('#switch-view #locations').click(openpayUtils.handleChangeView);
 $('#load-more').click(function () {
-    openpayUtils.searchBrands({loadMore: true})
+    openpayUtils.search({loadMore: true})
 });
 
 $(document).ready(function () {
@@ -44,7 +51,7 @@ $(document).ready(function () {
         .length > 0;
 
     if (shouldSearch) {
-        openpayUtils.searchBrands();
+        openpayUtils.search();
     } else {
         $('#search-results').hide();
     }
