@@ -25,9 +25,11 @@ const retail = [
     ['https://tomsaustralia.com.au/', '/images/JPG/retail/toms.jpg'],
     ['https://www.greggrantsaddlery.com.au/', '/images/JPG/retail/gregsaddelry.jpg'],
     ['https://skinnytan.com.au/collections/4-for-40', '/images/JPG/retail/skinny tan.jpg'],
-    ['https://www.rodneyclark.com/', '/images/JPG/retail/rodney clark.jpg'],
+    ['https://www.rodneyclark.com/categories/sale', '/images/JPG/retail/rodney clark.jpg'],
     ['https://www.pethouse.com.au/', '/images/JPG/retail/pet house.jpg'],
-    ['https://www.lincraft.com.au/', '/images/JPG/retail/lincraft.jpg']
+    ['https://www.lincraft.com.au/sewing-machines/by/brands/toyota/', '/images/JPG/retail/lincraft.jpg'],
+    ['http://www.jacnjean.com.au/', '/images/JPG/retail/jacandjean.jpg'],
+    ['https://takingshape.com.au/clothing/40-pc-off-fp-tops-tunics-and-dresses', '/images/JPG/retail/takingshape.jpg']
 ];
 const automotive = [
     ['http://autobahn.net.au/', '/images/JPG/auto/autobahn.jpg'],
@@ -39,9 +41,10 @@ const home = [
     ['https://bedsrus.com.au/', '/images/JPG/home/bedsrus.jpg'],
     ['https://www.robinskitchen.com.au/', '/images/JPG/home/robins.jpg'],
     ['https://myhouse.com.au/', '/images/JPG/home/myhouse.jpg'],
-    ['https://www.house.com.au/', '/images/JPG/home/house.jpg'],
-    ['https://www.spotlightstores.com/custommade', '/images/JPG/home/m2m.jpg'],
-    ['https://omegahomeservices.com.au/', '/images/JPG/home/omega.jpg']
+    ['https://www.house.com.au/brand/maxwell-~-williams?PageSizeProduct=48&SortProduct=PriceValue%20DESC&PageProduct=1', '/images/JPG/home/house.jpg'],
+    ['https://omegahomeservices.com.au/', '/images/JPG/home/omega.jpg'],
+    ['https://www.spotlightstores.com/services/custom-made/custom-made-offer-terms', '/images/JPG/home/m2m.jpg'],
+    ['https://www.unitedstonemelbourne.com.au/', '/images/JPG/home/unitedstone.jpg']
 ];
 
 /**
