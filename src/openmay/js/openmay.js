@@ -39,9 +39,9 @@ const home = [
     ['https://bedsrus.com.au/', '/images/JPG/home/bedsrus.jpg'],
     ['https://www.robinskitchen.com.au/', '/images/JPG/home/robins.jpg'],
     ['https://myhouse.com.au/', '/images/JPG/home/myhouse.jpg'],
-    ['https://www.house.com.au/','/images/JPG/home/house.jpg'],
-    ['https://www.spotlightstores.com/custommade','/images/JPG/home/m2m.jpg'],
-    ['https://omegahomeservices.com.au/','/images/JPG/home/omega.jpg']
+    ['https://www.house.com.au/', '/images/JPG/home/house.jpg'],
+    ['https://www.spotlightstores.com/custommade', '/images/JPG/home/m2m.jpg'],
+    ['https://omegahomeservices.com.au/', '/images/JPG/home/omega.jpg']
 ];
 
 /**
