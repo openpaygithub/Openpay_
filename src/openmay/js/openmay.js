@@ -25,7 +25,7 @@ const retail = [
     ['https://tomsaustralia.com.au/', '/images/JPG/retail/toms.jpg'],
     ['https://www.greggrantsaddlery.com.au/', '/images/JPG/retail/gregsaddelry.jpg'],
     ['https://skinnytan.com.au/collections/4-for-40', '/images/JPG/retail/skinny tan.jpg'],
-    ['https://www.rodneyclark.com/categories/sale', '/images/JPG/retail/rodney clark.jpg'],
+    ['https://www.rodneyclark.com/', '/images/JPG/retail/rodney clark.jpg'],
     ['https://www.pethouse.com.au/', '/images/JPG/retail/pet house.jpg'],
     ['https://www.lincraft.com.au/sewing-machines/by/brands/toyota/', '/images/JPG/retail/lincraft.jpg'],
     ['http://www.jacnjean.com.au/', '/images/JPG/retail/jacandjean.jpg'],
