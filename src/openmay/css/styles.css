@@ -113,12 +113,54 @@ section {
     overflow: hidden;
 }
 
+.voucher-text {
+    padding: 25px;
+}
+
+.health-steps {
+    padding: 0;
+    font-size: 1.25rem;
+    list-style: none;
+}
+
+.health-steps {
+    font-weight: 500 !important;
+}
+
+.extra-thick {
+    font-weight: 700;
+}
+
+.voucher-text {
+    background-color: rgba(15, 62, 71, 0.16);
+    color: #0F3E47;
+}
+
+.find-loc {
+    margin: 25px 0;
+    padding: 10px 50px;
+    background-color: #2864FF;
+}
+
+.fw-500{
+    font-weight: 500 !important;
+}
+
+.voucher-img {
+    min-height: 250px;
+    background-image: url('../../openmay/images/JPG/Vouchers_banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 @media screen and (max-width: 768px) {
-    .nav-link{
+    .nav-link {
         text-align: center;
         margin: 5px;
     }
-    #footer{
+
+    #footer {
         background-size: 100%;
     }
 
