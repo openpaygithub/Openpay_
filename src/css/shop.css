@@ -639,6 +639,21 @@ body {
     fill: #2864FF;
 }
 
+.feedback-survey {
+    display: flex;
+    flex-grow: 1;
+    margin-bottom: 0 !important;
+}
+
+.feedback-survey a {
+    width: 100%;
+    font-size: 14px;
+    color: #3C465A;
+    line-height: 20px;
+    text-decoration: underline;
+    text-align: right;
+}
+
 @keyframes loading {
     0%   {box-shadow: 60px 0 0 0 #00E1B4, 20px 0 0 0 blue, -20px 0 0 0 #2864FF;}
     5%   {box-shadow: 60px 0 0 0 #00E1B4, 20px 0 0 0 blue, -20px 0 0 2px #2864FF;}
