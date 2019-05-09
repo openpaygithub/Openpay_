@@ -110,6 +110,10 @@ small {
     opacity: 60;
 }
 
+.voucher-section {
+    padding-bottom: 4rem;
+}
+
 .store-img {
     width: 150px;
 }
