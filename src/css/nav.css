@@ -219,23 +219,7 @@ div {
     max-width: 1240px;
     margin: 0 auto;
     padding: 0 32px;
-}
-
-table {
-    display: block;
-}
-
-table tbody tr th {
-    text-align: left;
-    padding: 0 5px;
-}
-
-table tbody tr td {
-    text-align: left;
-    padding: 5px;
-    border: none;
-    font-size: 16px;
-}
+} 
 
 /*top menu hamburger*/
 @media (max-width: 1200px) {
