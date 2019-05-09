@@ -1,29 +1,67 @@
-
 /*general*/
-* { margin: 0; padding: 0; box-sizing: border-box;}
-html { box-sizing: border-box; }
-*, *:before, *:after { box-sizing: inherit; }
-ol, ul { list-style: none; font-weight: 300;}
-a { color: inherit; text-decoration: none; }
-h1, h2, h3, h4, h5, h6, body, a, p, ol, ul {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+ol,
+ul {
+    list-style: none;
+    font-weight: 300;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+a,
+p,
+ol,
+ul,
+td,
+th {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 
-body,p, ol, ul{
+body,
+p,
+ol,
+ul {
     font-weight: 300;
 }
 
-button:focus,input:focus{
+button:focus,
+input:focus {
     outline: none;
 }
 
-h1{
+h1 {
     font-weight: 600;
 }
 
-p,div{
+p,
+div {
     font-weight: 300;
 }
 
@@ -58,6 +96,7 @@ p,div{
 .topNav a:hover {
     color: #2864FF;
 }
+
 .topNav a.active {
     color: #2864FF;
     border-bottom: 2px solid #2864FF;
@@ -75,13 +114,16 @@ p,div{
     height: 24px;
     width: 129px;
     padding: 0;
-    margin: 28px 30px 0  0;
+    margin: 28px 30px 0 0;
 }
 
 .topNav .mainLogo:hover {
     border-bottom: 0 none;
 }
-#hamburgerMenu { display: none;}
+
+#hamburgerMenu {
+    display: none;
+}
 
 .footer {
     background-color: #3C465A;
@@ -101,10 +143,12 @@ p,div{
     line-height: 20px;
     padding: 0 20px;
 }
+
 .footer .footerMoreLinksMenu {
     text-align: center;
     margin: 20px 0;
 }
+
 .footerMoreLinksMenu .footerNav {
     color: #fff;
     font-size: 14px;
@@ -118,7 +162,8 @@ p,div{
     text-align: center;
     padding: 40px 0;
 }
-.footer .socialLinks  img {
+
+.footer .socialLinks img {
     width: 23px;
     height: 23px;
     position: absolute;
@@ -144,11 +189,13 @@ p,div{
     text-align: center;
     width: 100%;
 }
+
 .footerAppWrapper .apple {
     height: 40px;
     width: 135px;
     margin-right: 20px;
 }
+
 .footerAppWrapper .android {
     height: 40px;
     width: 134.63px;
@@ -174,9 +221,28 @@ p,div{
     padding: 0 32px;
 }
 
+table {
+    display: block;
+}
+
+table tbody tr th {
+    text-align: left;
+    padding: 0 5px;
+}
+
+table tbody tr td {
+    text-align: left;
+    padding: 5px;
+    border: none;
+    font-size: 16px;
+}
+
 /*top menu hamburger*/
 @media (max-width: 1200px) {
-    .topNav { visibility: hidden;}
+    .topNav {
+        visibility: hidden;
+    }
+
     .heroHomeContainer .heroInfo {
         padding: 0 50px;
     }
@@ -193,6 +259,7 @@ p,div{
         top: 30px;
         z-index: 2;
     }
+
     #hamburgerMenu {
         display: block;
         position: relative;
@@ -218,8 +285,10 @@ p,div{
         top: -6px;
         right: -5px;
         cursor: pointer;
-        opacity: 0; /* hide this */
-        z-index: 2; /* and place it over the hamburger */
+        opacity: 0;
+        /* hide this */
+        z-index: 2;
+        /* and place it over the hamburger */
         -webkit-touch-callout: none;
     }
 
@@ -244,18 +313,18 @@ p,div{
         transform-origin: 0% 100%;
     }
 
-    #hamburgerMenu input:checked ~ span {
+    #hamburgerMenu input:checked~span {
         opacity: 1;
         transform: rotate(45deg) translate(-2px, -1px);
         background: #3C465A;
     }
 
-    #hamburgerMenu input:checked ~ span:nth-last-child(3) {
+    #hamburgerMenu input:checked~span:nth-last-child(3) {
         opacity: 0;
         transform: rotate(0deg) scale(0.2, 0.2);
     }
 
-    #hamburgerMenu input:checked ~ span:nth-last-child(2) {
+    #hamburgerMenu input:checked~span:nth-last-child(2) {
         transform: rotate(-45deg) translate(0, -1px);
     }
 
@@ -281,7 +350,7 @@ p,div{
         font-size: 22px;
     }
 
-    #hamburgerMenu input:checked ~ ul {
+    #hamburgerMenu input:checked~ul {
         transform: none;
     }
 }
@@ -290,17 +359,20 @@ p,div{
     .footer .socialLinks span {
         display: block;
     }
-    .footer .socialLinks span:last-child {
-    }
+
+    .footer .socialLinks span:last-child {}
+
     .footer .socialLinks a {
         display: block;
         text-align: left;
         margin: 0 !important;
     }
+
     .footer .socialLinks a.linked {
         margin-left: 28px;
         margin-right: 15px;
     }
+
     .footer .footerNav {
         padding: 5px 5px;
         width: 100%;
@@ -310,5 +382,14 @@ p,div{
 }
 
 @media (max-width: 650px) {
-    table td, table th { display: block}
+
+    table td,
+    table th {
+        display: block;
+    }
+
+    table tbody tr th,
+    table tbody tr td {
+        text-align: center;
+    }
 }

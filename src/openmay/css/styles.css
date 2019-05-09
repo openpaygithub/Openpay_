@@ -14,6 +14,15 @@ section {
     padding-bottom: 2rem;
 }
 
+small {
+    font-size: 0.75rem;
+}
+
+.voucher-header {
+    color: #00E4B0;
+    margin-bottom: 2rem
+}
+
 .text-div {
     background-color: #0F3E47;
     padding: 10%;
@@ -118,8 +127,9 @@ section {
 }
 
 .health-steps {
+    margin: 1rem 0;
     padding: 0;
-    font-size: 1.25rem;
+    font-size: 1em;
     list-style: none;
 }
 
@@ -137,12 +147,12 @@ section {
 }
 
 .find-loc {
-    margin: 25px 0;
     padding: 10px 50px;
+    margin-bottom: 1rem;
     background-color: #2864FF;
 }
 
-.fw-500{
+.fw-500 {
     font-weight: 500 !important;
 }
 
