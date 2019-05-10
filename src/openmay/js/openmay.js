@@ -18,6 +18,14 @@ const featured = [
     ['https://tomsaustralia.com.au/', '/images/JPG/featured/toms.jpg']
 ];
 const retail = [
+    ['https://www.openpay.com.au/shop-brand?BrandID=QnJpZ2h0IEV5ZXM=', '/images/JPG/retail/retail_bright eyes.png'],
+    ['https://www.edgeclothing.com.au/pages/denim', '/images/JPG/retail/retail_edge.png'],
+    ['https://www.lincraft.com.au/brother-scanncut-sdx1200-machine', '/images/JPG/retail/retail_Lincraft_3.png'],
+    ['https://www.lincraft.com.au/haberdashery/dress-models/by/size/small_medium', '/images/JPG/retail//retail_Lincraft_4.png'],
+    ['https://www.openpay.com.au/shop?Keyword=Nike&PageSize=21&View=Locations', '/images/JPG/retail/retail_NIKE_mother.png'],
+    ['https://www.openpay.com.au/shop-brand?BrandID=QnJpZ2h0IEV5ZXM=', '/images/JPG/retail/retail_pethouse.png'],
+    ['https://www.rodneyclark.com/', '/images/JPG/retail/rodney clark.jpg'],
+    ['https://www.lincraft.com.au/sewing-machines/by/brands/toyota/', '/images/JPG/retail/lincraft.jpg'],
     ['https://www.backyardcatenclosures.com.au/', '/images/JPG/retail/backyard kitten palaces.jpg'],
     ['https://charlesandlee.com/collections/sets', '/images/JPG/retail/charles and lee.jpg'],
     ['https://www.backyardchickencoops.com.au/', '/images/JPG/retail/chicken coops.jpg'],
@@ -25,8 +33,6 @@ const retail = [
     ['https://tomsaustralia.com.au/', '/images/JPG/retail/toms.jpg'],
     ['https://www.greggrantsaddlery.com.au/', '/images/JPG/retail/gregsaddelry.jpg'],
     ['https://skinnytan.com.au/collections/4-for-40', '/images/JPG/retail/skinny tan.jpg'],
-    ['https://www.rodneyclark.com/', '/images/JPG/retail/rodney clark.jpg'],
-    ['https://www.lincraft.com.au/sewing-machines/by/brands/toyota/', '/images/JPG/retail/lincraft.jpg'],
     ['http://www.jacnjean.com.au/', '/images/JPG/retail/jacandjean.jpg']
 ];
 const automotive = [
@@ -35,11 +41,14 @@ const automotive = [
     ['http://auto.openpay.com.au/', '/images/JPG/auto/generic.jpg'],
 ];
 const home = [
+    ['https://www.house.com.au/ProductDisplay.aspx?ProductSearch=PCP-1028284%20PCP-1028287%20PCP-1027970%20PCP-1027969%20PCP-1027971%20PCP-1027980%20PCP-1027979', '/images/JPG/home/home_house_2.jpg'],
+    ['https://www.robinskitchen.com.au/specials?filterProduct=(PriceValue:ge:115,PriceValue:le:131)&FilterFeature=ProductFeatureNames.Name:eq:Range,Value:eq:Swiss%2BTec&PageProduct=1', '/images/JPG/home/home_rk.png'],
+    ['https://www.lincraft.com.au/home/bedroom/sheets/by/brands/novus/', '/images/JPG/home/home_Lincraft_2.png'],
+    ['https://www.unitedstonemelbourne.com.au/', '/images/JPG/home/unitedstone.jpg'],
     ['https://ihealthsaunas.com.au/', '/images/JPG/home/ihealth.jpg'],
     ['https://bedsrus.com.au/', '/images/JPG/home/bedsrus.jpg'],
     ['https://myhouse.com.au/', '/images/JPG/home/myhouse.jpg'],
-    ['https://omegahomeservices.com.au/', '/images/JPG/home/omega.jpg'],
-    ['https://www.unitedstonemelbourne.com.au/', '/images/JPG/home/unitedstone.jpg']
+    ['https://omegahomeservices.com.au/', '/images/JPG/home/omega.jpg']
 ];
 
 /**
