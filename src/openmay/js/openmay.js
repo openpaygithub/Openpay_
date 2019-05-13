@@ -27,7 +27,7 @@ const retail = [
     ],
     [
         "https://www.lincraft.com.au/haberdashery/dress-models/by/size/small_medium",
-        "/images/JPG/retail//retail_Lincraft_4.png"
+        "/images/JPG/retail/retail_Lincraft_4.png"
     ],
     [
         "https://www.openpay.com.au/shop-brand?BrandID=QnJpZ2h0IEV5ZXM=",
