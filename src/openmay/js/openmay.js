@@ -16,9 +16,9 @@
  *  @home  the array containing all promotions in the home category
  */
 const featured = [
-	[ null, '/images/JPG/featured/openmay.jpg' ],
-	[ 'http://auto.openpay.com.au/', '/images/JPG/auto/generic.jpg' ],
-	[ 'https://www.edgeclothing.com.au/pages/denim', '/images/JPG/retail/edge.jpg' ]
+	[null, '/images/JPG/featured/openmay.jpg'],
+	['http://auto.openpay.com.au/', '/images/JPG/auto/generic.jpg'],
+	['https://www.edgeclothing.com.au/pages/denim', '/images/JPG/retail/edge.jpg']
 ];
 const retail = [
 	[
@@ -39,16 +39,16 @@ const retail = [
 		'21 May 2019 23:59:00 GMT+10:00',
 		'22 May 2019 23:59:00 GMT+10:00'
 	],
-	[ 'https://unclejackwatches.com', '/images/JPG/retail/uncle-jack.jpg', '22 May 2019 23:59:00 GMT+10:00' ],
-	[ 'https://www.daleandwaters.com.au/', '/images/JPG/retail/dale-waters.jpg', '22 May 2019 23:59:00 GMT+10:00' ],
+	['https://unclejackwatches.com', '/images/JPG/retail/uncle-jack.jpg', '22 May 2019 23:59:00 GMT+10:00'],
+	['https://www.daleandwaters.com.au/', '/images/JPG/retail/dale-waters.jpg', '22 May 2019 23:59:00 GMT+10:00'],
 	[
 		'https://www.openpay.com.au/shop-brand?BrandID=QnJpZ2h0IEV5ZXM=',
 		'/images/JPG/retail/pethouse.jpg',
 		'24 May 2019 23:59:00 GMT+10:00'
 	],
-	[ 'https://silenttheory.com.au/', '/images/JPG/retail/silent theory.jpg' ],
-	[ 'https://allabouteveclothing.com/', '/images/JPG/retail/all about eve.jpg' ],
-	[ 'https://www.edgeclothing.com.au/', '/images/JPG/retail/edge.jpg' ],
+	['https://silenttheory.com.au/', '/images/JPG/retail/silent theory.jpg'],
+	['https://allabouteveclothing.com/', '/images/JPG/retail/all about eve.jpg'],
+	['https://www.edgeclothing.com.au/', '/images/JPG/retail/edge.jpg'],
 	[
 		'https://www.lincraft.com.au/brother-scanncut-sdx1200-machine',
 		'/images/JPG/retail/retail_Lincraft_3.png',
@@ -64,29 +64,29 @@ const retail = [
 		'/images/JPG/retail/lincraft.jpg',
 		'19 May 2019, GMT+10:00'
 	],
-	[ 'https://www.backyardcatenclosures.com.au/', '/images/JPG/retail/backyard kitten palaces.jpg' ],
-	[ 'https://charlesandlee.com/collections/sets', '/images/JPG/retail/charles and lee.jpg' ],
-	[ 'https://www.backyardchickencoops.com.au/', '/images/JPG/retail/chicken coops.jpg' ],
-	[ 'https://timbuk2.com.au/', '/images/JPG/retail/timbuk2.jpg' ],
-	[ 'https://tomsaustralia.com.au/', '/images/JPG/retail/toms.jpg' ],
-	[ 'https://www.greggrantsaddlery.com.au/', '/images/JPG/retail/gregsaddelry.jpg' ],
-	[ 'https://skinnytan.com.au/collections/4-for-40', '/images/JPG/retail/skinny tan.jpg' ],
-	[ 'http://www.jacnjean.com.au/', '/images/JPG/retail/jacandjean.jpg' ]
+	['https://www.backyardcatenclosures.com.au/', '/images/JPG/retail/backyard kitten palaces.jpg'],
+	['https://charlesandlee.com/collections/sets', '/images/JPG/retail/charles and lee.jpg'],
+	['https://www.backyardchickencoops.com.au/', '/images/JPG/retail/chicken coops.jpg'],
+	['https://timbuk2.com.au/', '/images/JPG/retail/timbuk2.jpg'],
+	['https://tomsaustralia.com.au/', '/images/JPG/retail/toms.jpg'],
+	['https://www.greggrantsaddlery.com.au/', '/images/JPG/retail/gregsaddelry.jpg'],
+	['https://skinnytan.com.au/collections/4-for-40', '/images/JPG/retail/skinny tan.jpg'],
+	['http://www.jacnjean.com.au/', '/images/JPG/retail/jacandjean.jpg']
 ];
 const automotive = [
-	[ 'http://autobahn.net.au/', '/images/JPG/auto/autobahn.jpg' ],
-	[ 'https://www.ultratune.com.au/', '/images/JPG/auto/ultratune.jpg' ],
-	[ 'http://auto.openpay.com.au/', '/images/JPG/auto/generic.jpg' ]
+	['http://autobahn.net.au/', '/images/JPG/auto/autobahn.jpg'],
+	['https://www.ultratune.com.au/', '/images/JPG/auto/ultratune.jpg'],
+	['http://auto.openpay.com.au/', '/images/JPG/auto/generic.jpg']
 ];
 const home = [
-	[ 'https://myhouse.com.au/', '/images/JPG/home/myhouse.jpg', '23 May 2019 00:00:00 GMT+10:00' ],
-	[ 'https://www.robinskitchen.com.au/', '/images/JPG/home/robins.jpg', '24 May 2019 23:59:00 GMT+10:00' ],
-	[ 'https://www.house.com.au/', '/images/JPG/home/house.jpg', '24 May 2019 23:59:00 GMT+10:00' ],
-	[ 'https://www.unitedstonemelbourne.com.au/', '/images/JPG/home/unitedstone.jpg' ],
-	[ 'https://ihealthsaunas.com.au/', '/images/JPG/home/ihealth.jpg' ],
-	[ 'https://bedsrus.com.au/', '/images/JPG/home/bedsrus.jpg' ],
-	[ 'https://bedsrus.com.au/', '/images/JPG/home/myhouse.jpg' ],
-	[ 'https://omegahomeservices.com.au/', '/images/JPG/home/omega.jpg' ]
+	['https://myhouse.com.au/', '/images/JPG/home/myhouse.jpg', '23 May 2019 00:00:00 GMT+10:00'],
+	['https://www.robinskitchen.com.au/', '/images/JPG/home/robins.jpg', '24 May 2019 23:59:00 GMT+10:00'],
+	['https://www.house.com.au/', '/images/JPG/home/house.jpg', '24 May 2019 23:59:00 GMT+10:00'],
+	['https://www.unitedstonemelbourne.com.au/', '/images/JPG/home/unitedstone.jpg'],
+	['https://ihealthsaunas.com.au/', '/images/JPG/home/ihealth.jpg'],
+	['https://bedsrus.com.au/', '/images/JPG/home/bedsrus.jpg'],
+	['https://bedsrus.com.au/', '/images/JPG/home/myhouse.jpg'],
+	['https://omegahomeservices.com.au/', '/images/JPG/home/omega.jpg']
 ];
 const monthNames = [
 	'January',
@@ -128,8 +128,6 @@ function createCarouselImages(parentElement, array) {
 		} else {
 			startDate = new Date('01 May 2019 00:00:00 GMT+10:00');
 		}
-
-		let startDate = null;
 
 		if (element[2] !== undefined && element[2] !== null) {
 			expiryDate = new Date(element[2]);
@@ -192,9 +190,9 @@ function initOpenmay() {
 	createCarouselImages('automotive', automotive);
 	createCarouselImages('home', home);
 	/**
-     * jQuery to initialize the carousel.
-     */
-	$(document).ready(function() {
+	 * jQuery to initialize the carousel.
+	 */
+	$(document).ready(function () {
 		$('.multiple-items').slick({
 			lazyLoad: 'ondemand',
 			autoplay: true,
@@ -202,8 +200,7 @@ function initOpenmay() {
 			slidesToShow: 3,
 			slidesToScroll: 3,
 			dots: true,
-			responsive: [
-				{
+			responsive: [{
 					breakpoint: 1024,
 					settings: {
 						slidesToShow: 2,
