@@ -121,6 +121,7 @@ function createCarouselImages(parentElement, array) {
 	const currentDate = new Date();
 	array.forEach((element) => {
 		let expiryDate = null;
+		let startDate = null;
 
 		if (element[3] !== undefined && element[3] !== null) {
 			startDate = new Date(element[3]);
