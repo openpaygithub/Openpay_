@@ -18,7 +18,7 @@
 const featured = [
 	[ null, '/images/JPG/featured/openmay.jpg' ],
 	[ 'http://auto.openpay.com.au/', '/images/JPG/auto/generic.jpg' ],
-	[ 'https://www.edgeclothing.com.au/pages/denim', '/images/JPG/retail/edge.jpg' ]
+	[ 'https://tomsaustralia.com.au/', '/images/JPG/retail/toms.jpg' ]
 ];
 const retail = [
 	[
@@ -46,9 +46,6 @@ const retail = [
 		'/images/JPG/retail/pethouse.jpg',
 		'24 May 2019 23:59:00 GMT+10:00'
 	],
-	[ 'https://silenttheory.com.au/', '/images/JPG/retail/silent theory.jpg' ],
-	[ 'https://allabouteveclothing.com/', '/images/JPG/retail/all about eve.jpg' ],
-	[ 'https://www.edgeclothing.com.au/', '/images/JPG/retail/edge.jpg' ],
 	[
 		'https://www.lincraft.com.au/brother-scanncut-sdx1200-machine',
 		'/images/JPG/retail/retail_Lincraft_3.png',
@@ -128,8 +125,7 @@ function createCarouselImages(parentElement, array) {
 		} else {
 			startDate = new Date('01 May 2019 00:00:00 GMT+10:00');
 		}
-
-		let startDate = null;
+ 
 
 		if (element[2] !== undefined && element[2] !== null) {
 			expiryDate = new Date(element[2]);
