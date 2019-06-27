@@ -141,6 +141,7 @@ a {
     font-weight: 700;
     color: white;
     padding: 15px;
+    cursor: pointer;
 }
 
 .location-info {
