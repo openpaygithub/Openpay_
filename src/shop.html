@@ -1,307 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" type="image/png" href="./images/favicon.png"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Openpay - Shop</title>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TF3JKHF');</script>
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TF3JKHF");
+    </script>
 
     <!-- 	FullStory Snippet -->
     <script>
-        window['_fs_debug'] = false;
-        window['_fs_host'] = 'fullstory.com';
-        window['_fs_org'] = 'D6N17';
-        window['_fs_namespace'] = 'FS';
-        (function (m, n, e, t, l, o, g, y) {
-            if (e in m) {
-                if (m.console && m.console.log) {
-                    m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');
-                }
-                return;
-            }
-            g = m[e] = function (a, b) {
-                g.q ? g.q.push([a, b]) : g._api(a, b);
-            };
-            g.q = [];
-            o = n.createElement(t);
-            o.async = 1;
-            o.src = 'https://' + _fs_host + '/s/fs.js';
-            y = n.getElementsByTagName(t)[0];
-            y.parentNode.insertBefore(o, y);
-            g.identify = function (i, v) {
-                g(l, {uid: i});
-                if (v) g(l, v)
-            };
-            g.setUserVars = function (v) {
-                g(l, v)
-            };
-            g.shutdown = function () {
-                g("rec", !1)
-            };
-            g.restart = function () {
-                g("rec", !0)
-            };
-            g.consent = function (a) {
-                g("consent", !arguments.length || a)
-            };
-            g.identifyAccount = function (i, v) {
-                o = 'account';
-                v = v || {};
-                v.acctId = i;
-                g(o, v)
-            };
-            g.clearUserCookie = function () {
-            };
-        })(window, document, window['_fs_namespace'], 'script', 'user');
+      window["_fs_debug"] = false;
+      window["_fs_host"] = "fullstory.com";
+      window["_fs_org"] = "D6N17";
+      window["_fs_namespace"] = "FS";
+      (function(m, n, e, t, l, o, g, y) {
+        if (e in m) {
+          if (m.console && m.console.log) {
+            m.console.log(
+              'FullStory namespace conflict. Please set window["_fs_namespace"].'
+            );
+          }
+          return;
+        }
+        g = m[e] = function(a, b) {
+          g.q ? g.q.push([a, b]) : g._api(a, b);
+        };
+        g.q = [];
+        o = n.createElement(t);
+        o.async = 1;
+        o.src = "https://" + _fs_host + "/s/fs.js";
+        y = n.getElementsByTagName(t)[0];
+        y.parentNode.insertBefore(o, y);
+        g.identify = function(i, v) {
+          g(l, { uid: i });
+          if (v) g(l, v);
+        };
+        g.setUserVars = function(v) {
+          g(l, v);
+        };
+        g.shutdown = function() {
+          g("rec", !1);
+        };
+        g.restart = function() {
+          g("rec", !0);
+        };
+        g.consent = function(a) {
+          g("consent", !arguments.length || a);
+        };
+        g.identifyAccount = function(i, v) {
+          o = "account";
+          v = v || {};
+          v.acctId = i;
+          g(o, v);
+        };
+        g.clearUserCookie = function() {};
+      })(window, document, window["_fs_namespace"], "script", "user");
     </script>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,600" rel="stylesheet">
-    <link rel="stylesheet" href="./css/shop.css?20190502"/>
-    <link rel="stylesheet" href="css/nav.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,600"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/shop.css?20190502" />
+    <link rel="stylesheet" href="css/nav.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="scripts/shop-utils.js?20190502"></script>
-</head>
-<body>
-<div class="topNav">
-    <a class="mainLogo" href="index"></a>
-    <a class="active" href="shop">Shop now</a>
-    <a href="how">How it works</a>
-    <a href="business">I'm a business</a>
-    <a href="help">Help & contact</a>
-    <div class="topNavRight">
-        <a href="https://retailer.myopenpay.com.au/live/Account/Login/" onclick="ga('send', 'event', 'Outbound', 'Merchant Log in');">Merchant log in</a>
+  </head>
+  <body>
+    <div class="topNav">
+      <a class="mainLogo" href="index"></a>
+      <a class="active" href="shop">Shop now</a>
+      <a href="how">How it works</a>
+      <a href="business">I'm a business</a>
+      <a href="help">Help & contact</a>
+      <div class="topNavRight">
+        <a
+          href="https://retailer.myopenpay.com.au/live/Account/Login/"
+          onclick="ga('send', 'event', 'Outbound', 'Merchant Log in');"
+          >Merchant log in</a
+        >
+      </div>
     </div>
-</div>
-<!--hamburger menu-->
-<nav role="navigation">
-    <a class="mainLogo" href="index"></a>
-    <div id="hamburgerMenu">
-        <input type="checkbox"/>
+    <!--hamburger menu-->
+    <nav role="navigation">
+      <a class="mainLogo" href="index"></a>
+      <div id="hamburgerMenu">
+        <input type="checkbox" />
         <span></span>
         <span></span>
         <span></span>
         <ul>
-            <a class="active" href="shop">
-                <li>Shop now</li>
-            </a>
-            <a href="how">
-                <li>How it works</li>
-            </a>
-            <a href="business">
-                <li>I'm a business</li>
-            </a>
-            <a href="help">
-                <li>Help & contact</li>
-            </a>
-            <br>
-            <a href="#">
-                <li>Merchant log in</li>
-            </a>
-
+          <a class="active" href="shop">
+            <li>Shop now</li>
+          </a>
+          <a href="how">
+            <li>How it works</li>
+          </a>
+          <a href="business">
+            <li>I'm a business</li>
+          </a>
+          <a href="help">
+            <li>Help & contact</li>
+          </a>
+          <br />
+          <a href="#">
+            <li>Merchant log in</li>
+          </a>
         </ul>
-    </div>
-</nav>
-<div class="subheader">
-    <div class="bodyContainer">
+      </div>
+    </nav>
+    <div class="subheader">
+      <div class="bodyContainer">
         <div class="filters">
-            <div class="search-box">
-                <input type="text" name="search" placeholder="Search brands" id="query">
-                <button id="search-btn">Search</button>
-            </div>
-            <div class="custom-select">
-                <select class="category" id="category">
-                    <option value>All Categories</option>
-                    <option value="209002">Health &amp; Wellbeing</option>
-                    <option value="209003">Fashion</option>
-                    <option value="209004">Lifestyle</option>
-                    <option value="209007">Beauty</option>
-                    <option value="209008">Trades &amp; Services</option>
-                    <option value="209001">Automotive</option>
-                    <option value="209006">Dental</option>
-                    <option value="209009">Sports &amp; Outdoors</option>
-                    <option value="209005">Home &amp; Garden</option>
-                </select>
-            </div>
-            <div class="switch-availability" id="switch-availability">
-                <input type="radio" id="all" name="switch-availability" value="all" />
-                <label for="all">All</label>
-                <input type="radio" id="online" name="switch-availability" value="online" />
-                <label for="online">Online</label>
-                <input type="radio" id="in-store" name="switch-availability" value="in-store" />
-                <label for="in-store">In-Store</label>
-            </div>
-            <div class="search-box" id="post-code-search-box">
-                <input type="text" name="post-code" placeholder="Enter a postcode" id="post-code">
-                <button id="post-code-update-btn">Update</button>
-            </div>
-            <div class="feedback-survey">
-                <a href="https://www.surveymonkey.com/r/KCJYH8F" target="_blank">Give feedback</a>
-            </div>
+          <div class="search-box">
+            <input
+              type="text"
+              name="search"
+              placeholder="Search brands"
+              id="query"
+            />
+            <button id="search-btn">Search</button>
+          </div>
+          <div class="custom-select">
+            <select class="category" id="category">
+              <option value>All Categories</option>
+              <option value="209002">Health &amp; Wellbeing</option>
+              <option value="209003">Fashion</option>
+              <option value="209004">Lifestyle</option>
+              <option value="209007">Beauty</option>
+              <option value="209008">Trades &amp; Services</option>
+              <option value="209001">Automotive</option>
+              <option value="209006">Dental</option>
+              <option value="209009">Sports &amp; Outdoors</option>
+              <option value="209005">Home &amp; Garden</option>
+            </select>
+          </div>
+          <div class="switch-availability" id="switch-availability">
+            <input
+              type="radio"
+              id="all"
+              name="switch-availability"
+              value="all"
+            />
+            <label for="all">All</label>
+            <input
+              type="radio"
+              id="online"
+              name="switch-availability"
+              value="online"
+            />
+            <label for="online">Online</label>
+            <input
+              type="radio"
+              id="in-store"
+              name="switch-availability"
+              value="in-store"
+            />
+            <label for="in-store">In-Store</label>
+          </div>
+          <div class="search-box" id="post-code-search-box">
+            <input
+              type="text"
+              name="post-code"
+              placeholder="Enter a postcode"
+              id="post-code"
+            />
+            <button id="post-code-update-btn">Update</button>
+          </div>
+          <div class="feedback-survey">
+            <a href="https://www.surveymonkey.com/r/KCJYH8F" target="_blank"
+              >Give feedback</a
+            >
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<div class="mainContent">
-    <div class="promotions greyPane" id="promotions">
+    <div class="mainContent">
+      <div class="promotions greyPane" id="promotions">
         <div class="bodyContainer">
-            <h1>Featured Retailers</h1>
-            <div class="treeBanners">
-		        <div class="col-3">
-                    <a href="https://tomsaustralia.com.au/">  <img src="./images/TOMS.png"></a>
-                </div>
-                <div class="col-3">
-                    <a href="https://timbuk2.com.au/">  <img src="./images/Timbuk2.png"></a>
-                </div>
-                <div class="col-3">
-                    <a href="bunnings"><img src="./images/Bunnings Reg.png"></a>
-                </div>
+          <h1>Featured Retailers</h1>
+          <div class="treeBanners">
+            <div class="col-3">
+              <a href="https://www.edgeclothing.com.au/pages/kids"
+                ><img src="./images/edge.jpg"
+              /></a>
+            </div>
+            <div class="col-3">
+              <a href="https://www.frenchconnection.com.au/man-1/">
+                <img src="./images/french-connection.jpg"
+              /></a>
+            </div>
+            <div class="col-3">
+              <a href="bunnings"><img src="./images/Bunnings Reg.png"/></a>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div class="byCategory greyPane" id="categories-grid">
+        <div class="bodyContainer">
+          <h1>Browse by category</h1>
+          <div class="fourBanners">
+            <div class="col-4">
+              <div class="marketToProvide cat-1" data-value="209002">
+                <h3>Health & wellbeing</h3>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="marketToProvide cat-2" data-value="209003">
+                <h3>Fashion</h3>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="marketToProvide cat-4" data-value="209007">
+                <h3>Beauty</h3>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="marketToProvide cat-5" data-value="209008">
+                <h3>Trades & services</h3>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="marketToProvide cat-6" data-value="209001">
+                <h3>Automotive</h3>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="marketToProvide cat-7" data-value="209005">
+                <h3>Home & garden</h3>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="marketToProvide cat-8" data-value="209006">
+                <h3>Dental</h3>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="marketToProvide cat-9" data-value="209009">
+                <h3>Sports &amp; Outdoors</h3>
+              </div>
             </div>
             <div class="clear"></div>
+          </div>
         </div>
-    </div>
-    <div class="clear"></div>
-    <div class="byCategory greyPane" id="categories-grid">
+      </div>
+      <div class="brands-search-results greyPane" id="search-results">
         <div class="bodyContainer">
-            <h1>Browse by category</h1>
-            <div class="fourBanners">
-                <div class="col-4">
-                    <div class="marketToProvide cat-1" data-value="209002">
-                        <h3>Health & wellbeing</h3>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="marketToProvide cat-2" data-value="209003">
-                        <h3>Fashion</h3>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="marketToProvide cat-4" data-value="209007">
-                        <h3>Beauty</h3>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="marketToProvide cat-5" data-value="209008">
-                        <h3>Trades & services</h3>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="marketToProvide cat-6" data-value="209001">
-                        <h3>Automotive</h3>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="marketToProvide cat-7" data-value="209005">
-                        <h3>Home & garden</h3>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="marketToProvide cat-8" data-value="209006">
-                        <h3>Dental</h3>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="marketToProvide cat-9" data-value="209009">
-                        <h3>Sports &amp; Outdoors</h3>
-                    </div>
-                </div>
-                <div class="clear"></div>
+          <div class="results-heading">
+            <h2 class="results-count">
+              <span id="search-results-count">120</span> results
+            </h2>
+            <div class="results-view-switch">
+              <div class="switch-view" id="switch-view">
+                <input type="radio" name="switch-view" id="list" value="list" />
+                <label for="list">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                  >
+                    <path
+                      d="M19 5v14H5V5h14m1-2H4L3 4v16l1 1h16l1-1V4l-1-1zm-9 4h6v2h-6V7zm0 4h6v2h-6v-2zm0 4h6v2h-6zM7 7h2v2H7zm0 4h2v2H7zm0 4h2v2H7z"
+                    />
+                    <path fill="none" d="M0 0h24v24H0z" />
+                  </svg>
+                  <span class="switch-view-title">List</span>
+                </label>
+                <input
+                  type="radio"
+                  name="switch-view"
+                  id="locations"
+                  value="locations"
+                />
+                <label for="locations">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                  >
+                    <path
+                      d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"
+                    />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                  </svg>
+                  <span class="switch-view-title">Locations</span>
+                </label>
+              </div>
             </div>
+          </div>
+          <div class="clear"></div>
+          <div class="brands-search-results-grid" id="results"></div>
+          <div class="loading-cir" id="loader"></div>
+          <div class="brands-load-more" id="load-more">
+            <button>Load more</button>
+          </div>
         </div>
-    </div>
-    <div class="brands-search-results greyPane" id="search-results">
-        <div class="bodyContainer">
-            <div class="results-heading">
-                <h2 class="results-count"><span id="search-results-count">120</span> results</h2>
-                <div class="results-view-switch">
-                    <div class="switch-view" id="switch-view">
-                        <input type="radio" name="switch-view" id="list" value="list" />
-                        <label for="list">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                                <path d="M19 5v14H5V5h14m1-2H4L3 4v16l1 1h16l1-1V4l-1-1zm-9 4h6v2h-6V7zm0 4h6v2h-6v-2zm0 4h6v2h-6zM7 7h2v2H7zm0 4h2v2H7zm0 4h2v2H7z"/>
-                                <path fill="none" d="M0 0h24v24H0z"/>
-                            </svg>
-                            <span class="switch-view-title">List</span>
-                        </label>
-                        <input type="radio" name="switch-view" id="locations" value="locations" />
-                        <label for="locations">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                                <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-                                <path d="M0 0h24v24H0z" fill="none"/>
-                            </svg>
-                            <span class="switch-view-title">Locations</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="clear"></div>
-            <div class="brands-search-results-grid" id="results"></div>
-            <div class="loading-cir" id="loader"></div>
-            <div class="brands-load-more" id="load-more">
-                <button>Load more</button>
-            </div>
-        </div>
-    </div>
-    <div class="clear"></div>
-    <div class="footer">
+      </div>
+      <div class="clear"></div>
+      <div class="footer">
         <div class="footerMenu">
-            <a href="shop" class="footerNav">Shop now</a>
-            <a href="how" class="footerNav">How it works</a>
-            <a href="business" class="footerNav">I'm a business</a>
-            <a href="help" class="footerNav">Help & contact</a>
-            <a href="legal" class="footerNav">Legal stuff</a>
-            <!-- <a href="https://brand.openpay.com.au" class="footerNav">Merchant resources</a> -->
+          <a href="shop" class="footerNav">Shop now</a>
+          <a href="how" class="footerNav">How it works</a>
+          <a href="business" class="footerNav">I'm a business</a>
+          <a href="help" class="footerNav">Help & contact</a>
+          <a href="legal" class="footerNav">Legal stuff</a>
+          <!-- <a href="https://brand.openpay.com.au" class="footerNav">Merchant resources</a> -->
         </div>
         <div class="socialLinks">
-				<span>
-					<a href="https://facebook.com/openpayau" class="footer-icon fb">
-						<img src="./images/social/Fb.svg">
-						Facebook
-					</a>
-					<a href="https://twitter.com/openpay_" class="footer-icon twit">
-						<img src="./images/social/Twitter.svg">
-						Twitter
-					</a>
-				</span>
-            <span>
-					<a href="https://au.linkedin.com/company/open-pay" class="footer-icon linked">
-						<img src="./images/social/in.svg">
-						LinkedIn
-					</a>
-					<a href="https://www.instagram.com/openpay_" class="footer-icon ig">
-						<img src="./images/social/Insta.svg">
-						Instagram
-					</a>
-				</span>
+          <span>
+            <a href="https://facebook.com/openpayau" class="footer-icon fb">
+              <img src="./images/social/Fb.svg" />
+              Facebook
+            </a>
+            <a href="https://twitter.com/openpay_" class="footer-icon twit">
+              <img src="./images/social/Twitter.svg" />
+              Twitter
+            </a>
+          </span>
+          <span>
+            <a
+              href="https://au.linkedin.com/company/open-pay"
+              class="footer-icon linked"
+            >
+              <img src="./images/social/in.svg" />
+              LinkedIn
+            </a>
+            <a href="https://www.instagram.com/openpay_" class="footer-icon ig">
+              <img src="./images/social/Insta.svg" />
+              Instagram
+            </a>
+          </span>
         </div>
         <div class="footerAppWrapper">
-            <a href="https://itunes.apple.com/au/app/openpay/id1166424403?mt=8" onclick="ga('send', 'event', 'App', 'iOS', 'Footer');">
-                <img class="apple" src="./images/apple.svg">
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.ocean.openpay" onclick="ga('send', 'event', 'App', 'Android', 'Footer');">
-                <img class="android" src="./images/android.svg">
-            </a>
+          <a
+            href="https://itunes.apple.com/au/app/openpay/id1166424403?mt=8"
+            onclick="ga('send', 'event', 'App', 'iOS', 'Footer');"
+          >
+            <img class="apple" src="./images/apple.svg" />
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.ocean.openpay"
+            onclick="ga('send', 'event', 'App', 'Android', 'Footer');"
+          >
+            <img class="android" src="./images/android.svg" />
+          </a>
         </div>
         <div class="footerMoreLinksMenu">
-            <a href="legal" class="footerNav">Privacy</a>
-            <a href="legal" class="footerNav">Terms & Conditions</a>
-            <a href="legal" class="footerNav">User Licence</a>
-            <a href="legal" class="footerNav">PCI Data Security</a>
+          <a href="legal" class="footerNav">Privacy</a>
+          <a href="legal" class="footerNav">Terms & Conditions</a>
+          <a href="legal" class="footerNav">User Licence</a>
+          <a href="legal" class="footerNav">PCI Data Security</a>
         </div>
         <p>&#169; Openpay &nbsp; | &nbsp; Made in Melbourne, Australia</p>
         <a class="whiteLogo" href="index">
-            <img src="./images/openpay_logo_white.svg">
+          <img src="./images/openpay_logo_white.svg" />
         </a>
-
+      </div>
     </div>
-</div>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TF3JKHF"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<script src="scripts/shop.js?20190502"></script>
-</body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TF3JKHF"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <script src="scripts/shop.js?20190502"></script>
+  </body>
 </html>
