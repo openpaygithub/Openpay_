@@ -3,7 +3,7 @@ body {background-color: #fff;}
 .heroBusinessContainer {
     margin: 0;
     position: relative;
-    background: url(../images/businessHero.png);
+    background: url(../images/businessHero.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
