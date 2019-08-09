@@ -8,7 +8,7 @@ body {
 
 .heroHomeContainer {
     position: relative;
-    background: url(../images/hero.png);
+    background: url(../images/hero.jpg);
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
@@ -224,7 +224,6 @@ body {
 
 .downloadApp p {
     max-width: 570px;
-    /*color: #FFFFFF;*/
     font-size: 16px;
     font-weight: 300;
     line-height: 26px;
@@ -295,10 +294,6 @@ body {
 
 .marketToProvide.cat-2 {
     background: url(../images/categoryPics/Fashion.jpg) center center no-repeat;
-}
-
-.marketToProvide.cat-3 {
-    /*background-image: url(../images/categoryPics/Health.jpg);*/
 }
 
 .marketToProvide.cat-4 {

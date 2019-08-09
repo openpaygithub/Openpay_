@@ -167,7 +167,7 @@ ul li input[type=checkbox]:checked ~ i:after {
 .heroHowContainer {
     margin: 0;
     position: relative;
-    background: url(../images/bunningsHero.png);
+    background: url(../images/bunningsHero.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -440,7 +440,7 @@ ul li input[type=checkbox]:checked ~ i:after {
 .howItWorks .button {height: 40px;width: 288px;border: 2px solid #40354E;border-radius: 4px;padding: 5px 95px;font-weight: 600;}
 
 .downloadApp {
-    background: url(../images/bunningsInterior.png);
+    background: url(../images/bunningsInterior.jpg);
     margin: 0;
     position: relative;
     background-size: cover;
@@ -474,7 +474,7 @@ ul li input[type=checkbox]:checked ~ i:after {
 }
 
 .kitchens {
-    background: url(../images/bunningsKitchen.png);
+    background: url(../images/bunningsKitchen.jpg);
     margin: 0;
     position: relative;
     background-size: cover;
