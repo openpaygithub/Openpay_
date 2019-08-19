@@ -453,6 +453,20 @@ body {
     .promo-card {
         max-width: 300px;
     }
+
+    .location-banner_text {
+        font-size: 13px;
+    }
+
+    .location-banner_close {
+        right: 10px;
+        top: 19px;
+    }
+
+    .location-banner_close img {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 @keyframes slide-up {
