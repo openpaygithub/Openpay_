@@ -8,12 +8,12 @@ function showLocationBanner () {
 
     var $link = document.createElement('a');
     $link.href = 'https://www.myopenpay.co.uk/';
-    $link.innerText = 'Take me there';
+    $link.innerText = 'Visit Openpay UK';
 
     $banner.innerHTML = `
         <img src="./images/tower-bridge.svg" alt="UK" class="location-banner_ico" />
         <div class="location-banner_text">
-            <p>Looks like you might be in the UK.</p>
+            <p>Hi! Looks like you're in the UK.</p>
         </div>
     `;
 
@@ -53,6 +53,6 @@ function showLocationBanner () {
 
 if (localStorage.getItem('openpay-au-location-checked') !== 'true') {
     $.ajax({ url: 'https://ipinfo.io/json' }).done(function (json) {
-        if (json && json.country === 'UK') showLocationBanner();
+        if (json && json.country === 'UA') showLocationBanner();
     });
 }
