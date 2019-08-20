@@ -53,6 +53,6 @@ function showLocationBanner () {
 
 if (localStorage.getItem('openpay-au-location-checked') !== 'true') {
     $.ajax({ url: 'https://ipinfo.io/json' }).done(function (json) {
-        if (json && json.country === 'UA') showLocationBanner();
+        if (json && json.country === 'UK') showLocationBanner();
     });
 }
