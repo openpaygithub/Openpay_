@@ -370,7 +370,7 @@ body {
 }
 
 .location-banner_text {
-    padding: 0 30px;
+    padding: 0 16px;
     color: #3C465A;
     font-size: 16px;
 }
@@ -445,7 +445,6 @@ body {
 
     .location-banner_text {
         font-size: 14px;
-        padding: 0 13px;
     }
 }
 
