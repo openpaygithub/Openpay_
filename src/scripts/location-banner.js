@@ -1,3 +1,10 @@
+function sendEvent(evt = {}) {
+    if ('ga' in window) {
+        tracker = ga.getAll()[0];
+        if (tracker) tracker.send('event', evt.eventCategory, evt.eventAction, evt.eventLabel);
+    }
+}
+
 function showLocationBanner () {
     var $banner = document.createElement('div');
     $banner.className = 'location-banner';
@@ -25,7 +32,7 @@ function showLocationBanner () {
             document.body.removeChild($banner);
             localStorage.setItem('openpay-au-location-checked', 'true');
 
-            if (ga) ga('send', 'event', {
+            sendEvent('send', 'event', {
                 eventCategory: 'Location Switcher',
                 eventAction: 'close',
                 eventLabel: 'Location switcher closed'
@@ -39,7 +46,7 @@ function showLocationBanner () {
     $link.addEventListener('click', function () {
         localStorage.setItem('openpay-au-location-checked', 'true');
 
-        if (ga) ga('send', 'event', {
+        sendEvent('send', 'event', {
             eventCategory: 'Location Switcher',
             eventAction: 'redirect',
             eventLabel: 'Location switcher used'
@@ -52,7 +59,7 @@ function showLocationBanner () {
 }
 
 if (localStorage.getItem('openpay-au-location-checked') !== 'true') {
-    $.ajax({ url: 'https://ipinfo.io/json' }).done(function (json) {
+    $.ajax({ url: 'https://ipinfo.io/json?token=a2cf39fba6a7e3' }).done(function (json) {
         if (json && json.country === 'UK') showLocationBanner();
     });
 }
