@@ -32,7 +32,7 @@ function showLocationBanner () {
             document.body.removeChild($banner);
             localStorage.setItem('openpay-au-location-checked', 'true');
 
-            sendEvent('send', 'event', {
+            sendEvent({
                 eventCategory: 'Location Switcher',
                 eventAction: 'close',
                 eventLabel: 'Location switcher closed'
@@ -46,7 +46,7 @@ function showLocationBanner () {
     $link.addEventListener('click', function () {
         localStorage.setItem('openpay-au-location-checked', 'true');
 
-        sendEvent('send', 'event', {
+        sendEvent({
             eventCategory: 'Location Switcher',
             eventAction: 'redirect',
             eventLabel: 'Location switcher used'
