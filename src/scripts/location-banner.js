@@ -1,4 +1,5 @@
-function sendEvent(evt = {}) {
+function sendEvent(event) {
+    var evt = event || {};
     if ('ga' in window) {
         tracker = ga.getAll()[0];
         if (tracker) tracker.send('event', evt.eventCategory, evt.eventAction, evt.eventLabel);
@@ -17,12 +18,10 @@ function showLocationBanner () {
     $link.href = 'https://www.myopenpay.co.uk/';
     $link.innerText = 'Visit Openpay UK';
 
-    $banner.innerHTML = `
-        <img src="./images/tower-bridge.svg" alt="UK" class="location-banner_ico" />
-        <div class="location-banner_text">
-            <p>Hi! Looks like you're in the UK.</p>
-        </div>
-    `;
+    $banner.innerHTML = '<img src="./images/tower-bridge.svg" alt="UK" class="location-banner_ico" />' +
+        '<div class="location-banner_text">' +
+            '<p>Hi! Looks like you\'re in the UK.</p>' +
+        '</div>';
 
     $banner.appendChild($closeBtn);
     $banner.getElementsByClassName('location-banner_text')[0].appendChild($link);
@@ -30,7 +29,7 @@ function showLocationBanner () {
     function onClose() {
         $banner.addEventListener('animationend', function() {
             document.body.removeChild($banner);
-            localStorage.setItem('openpay-au-location-checked', 'true');
+            if (localStorage) localStorage.setItem('openpay-au-location-checked', 'true');
 
             sendEvent({
                 eventCategory: 'Location Switcher',
@@ -44,7 +43,7 @@ function showLocationBanner () {
 
     $closeBtn.addEventListener('click', onClose);
     $link.addEventListener('click', function () {
-        localStorage.setItem('openpay-au-location-checked', 'true');
+        if (localStorage) localStorage.setItem('openpay-au-location-checked', 'true');
 
         sendEvent({
             eventCategory: 'Location Switcher',
@@ -58,8 +57,8 @@ function showLocationBanner () {
     return $banner;
 }
 
-if (localStorage.getItem('openpay-au-location-checked') !== 'true') {
+if (localStorage && localStorage.getItem('openpay-au-location-checked') !== 'true') {
     $.ajax({ url: 'https://ipinfo.io/json?token=a2cf39fba6a7e3' }).done(function (json) {
-        if (json && json.country === 'UK') showLocationBanner();
+        if (json && json.country === 'GB') showLocationBanner();
     });
 }
