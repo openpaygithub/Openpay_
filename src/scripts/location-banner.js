@@ -1,5 +1,6 @@
 function sendEvent(event) {
     var evt = event || {};
+
     if ('ga' in window) {
         tracker = ga.getAll()[0];
         if (tracker) tracker.send('event', evt.eventCategory, evt.eventAction, evt.eventLabel);
