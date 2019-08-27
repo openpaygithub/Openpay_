@@ -2,8 +2,11 @@ function sendEvent(event) {
     var evt = event || {};
 
     if ('ga' in window) {
-        tracker = ga.getAll()[0];
-        if (tracker) tracker.send('event', evt.eventCategory, evt.eventAction, evt.eventLabel);
+        ga(function() {
+            var tracker = ga.create('UA-84225706-1', 'auto');
+
+            if (tracker) tracker.send('event', evt.eventCategory, evt.eventAction, evt.eventLabel);
+        });
     }
 }
 
