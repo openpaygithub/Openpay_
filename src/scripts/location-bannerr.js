@@ -8,6 +8,12 @@ function sendEvent(event) {
 }
 
 function showLocationBanner () {
+    sendEvent({
+        eventCategory: 'Location Switcher',
+        eventAction: 'show',
+        eventLabel: 'Location switcher showed'
+    });
+
     var $banner = document.createElement('div');
     $banner.className = 'location-banner';
 
@@ -59,7 +65,7 @@ function showLocationBanner () {
 }
 
 if (localStorage && localStorage.getItem('openpay-au-location-checked') !== 'true') {
-    $.ajax({ url: 'https://ipinfo.io/json?token=a2cf39fba6a7e3' }).done(function (json) {
-        if (json && json.country === 'GB') showLocationBanner();
+    $.ajax({ url: 'https://ip2c.org/s' }).done(function(res) {
+        if (res && res.split(';')[1] === 'GB') showLocationBanner();
     });
 }
