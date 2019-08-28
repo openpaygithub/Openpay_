@@ -172,7 +172,8 @@ div {
     font-weight: 600;
     line-height: 24px;
     padding: 6px 40px 6px 42px;
-    position: relative
+    position: relative;
+    display: inline-flex;
 }
 
 .footer .socialLinks a.fb {
@@ -326,6 +327,10 @@ div {
     #hamburgerMenu input:checked~ul {
         transform: none
     }
+
+    .footer {
+        padding: 80px 20px;
+    }
 }
 
 @media(max-width:980px) {
@@ -333,12 +338,11 @@ div {
         display: block
     }
 
-    .footer .socialLinks span:last-child {}
-
     .footer .socialLinks a {
         display: block;
         text-align: left;
-        margin: 0 !important
+        margin: 0 !important;
+        padding: 6px 40px 6px 32px;
     }
 
     .footer .socialLinks a.linked {
@@ -346,8 +350,12 @@ div {
         margin-right: 15px
     }
 
+    .footer .socialLinks img {
+        left: 0;
+    }
+
     .footer .footerNav {
-        padding: 5px;
+        padding: 5px 0;
         width: 100%;
         display: block;
         text-align: left
@@ -355,9 +363,19 @@ div {
 }
 
 @media(max-width:650px) {
-
     table td,
     table th {
         display: block
+    }
+}
+
+@media(max-width:375px) {
+    .footerAppWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footerAppWrapper .apple {
+        margin: 0 0 5px 0;
     }
 }
