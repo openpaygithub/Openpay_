@@ -1,0 +1,256 @@
+body {
+  background-color: #fff;
+}
+
+/* Hero Section*/
+
+.heroHowContainer {
+  margin: 0;
+  position: relative;
+  background: url(../images/bunnings-kitchen-hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+  align-items: center;
+  top: 0;
+}
+
+.heroHowContainer .greyWithOpacity {
+  position: absolute;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.bodyContainer {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0px 50px;
+}
+
+.heroHowContainer .heroInfo {
+  position: relative;
+  color: #fff;
+  padding-top: 150px;
+}
+
+.heroHowContainer .heroInfo h1 {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 60px;
+  max-width: 910px;
+}
+
+.bunningsLogo {
+  padding-bottom: 50px;
+  max-width: 210px;
+}
+
+/* Copy Section */
+
+.copy {
+  background-color: #eee;
+  padding: 70px 0;
+  color: #3c465a;
+  text-align: center;
+}
+
+.copy__container {
+  max-width: 990px;
+  margin: 0 auto;
+}
+
+.copy__title {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+.copy__subtitle {
+  padding-top: 30px;
+  font-size: 20px;
+  font-weight: 400;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* Shop Section */
+
+.shop {
+  padding: 80px 0;
+  max-width: 990px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.shop__title {
+  color: #3c465a;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.shop__items-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 90px 0 70px;
+}
+
+.shop__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shop__item-title {
+  padding-top: 30px;
+  color: #3c465a;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.shop__item-subtitle {
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: 300;
+  max-width: 280px;
+}
+
+.shop__link {
+  color: #fff;
+  background-color: #2864ff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 600;
+  padding: 26px 44px;
+  border-radius: 15px;
+}
+
+/* Apps Section */
+
+.downloadApp {
+  background: url(../images/bunnings-kitchen-app.jpg);
+  margin: 0;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  top: 0;
+  color: #fff;
+  padding: 70px 30px;
+  text-align: center;
+  height: 500px;
+}
+
+.downloadApp h2 {
+  color: #3c465a;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 50px;
+}
+
+.downloadApp p {
+  max-width: 570px;
+  color: #3c465a;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 25px auto 30px;
+}
+
+.downloadApp a {
+  margin-right: 10px;
+}
+
+.downloadApp a:last-child {
+  margin-right: 0;
+}
+
+.downloadApp .apple {
+  height: 40px;
+  width: 135px;
+}
+.downloadApp .android {
+  height: 40px;
+  width: 134.63px;
+}
+
+.whiteLowOp {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  margin: auto;
+  padding: 80px 0 50px;
+  max-width: 850px;
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .bodyContainer {
+    padding: 0 20px;
+  }
+
+  .heroHowContainer .heroInfo h1 {
+    font-size: 36px;
+  }
+
+  .copy__container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroHowContainer {
+    height: initial;
+  }
+
+  .heroHowContainer .heroInfo {
+    padding: 40px 0;
+  }
+
+  .bunningsLogo {
+    padding-bottom: 20px;
+  }
+
+  .copy,
+  .shop {
+    padding: 40px 20px;
+  }
+
+  .copy__title,
+  .shop__title {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .shop__items-wrapper {
+    flex-direction: column;
+    padding: 30px 0 0;
+  }
+
+  .shop__item {
+    padding-bottom: 30px;
+  }
+
+  .shop__link {
+    padding: 20px;
+  }
+
+  .downloadApp {
+    padding: 40px 20px;
+    height: initial;
+  }
+
+  .downloadApp h2 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  .whiteLowOp {
+    padding: 40px 10px;
+  }
+}
