@@ -5,9 +5,9 @@ var $merchant = document.getElementsByClassName('merchant-login-link');
 [].forEach.call($ios, function (el) {
     el.addEventListener('click', function () {
         if ('sendEvent' in window) window.sendEvent({
-            eventCategory: 'iOS App',
-            eventAction: 'Download',
-            eventLabel: 'iOS App download link footer'
+            eventCategory: 'Outbound Links',
+            eventAction: 'Click',
+            eventLabel: 'iOS Footer'
         });
     });
 });
@@ -15,9 +15,9 @@ var $merchant = document.getElementsByClassName('merchant-login-link');
 [].forEach.call($android, function (el) {
     el.addEventListener('click', function () {
         if ('sendEvent' in window) window.sendEvent({
-            eventCategory: 'Android App',
-            eventAction: 'Download',
-            eventLabel: 'Android App download link footer'
+            eventCategory: 'Outbound Links',
+            eventAction: 'Click',
+            eventLabel: 'Android Footer'
         });
     })
 });
@@ -25,9 +25,9 @@ var $merchant = document.getElementsByClassName('merchant-login-link');
 [].forEach.call($merchant, function (el) {
     el.addEventListener('click', function () {
         if ('sendEvent' in window) window.sendEvent({
-            eventCategory: 'Merchant',
-            eventAction: 'Login',
-            eventLabel: 'Merchant login clicked header'
+            eventCategory: 'Outbound Links',
+            eventAction: 'Click',
+            eventLabel: 'Merchant Login'
         });
     })
 });

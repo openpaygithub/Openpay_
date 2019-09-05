@@ -236,8 +236,8 @@
 
     $('#url').click(function () {
         if ('sendEvent' in window) window.sendEvent({
-            eventCategory: 'Retailer website',
-            eventAction: 'Redirect',
+            eventCategory: 'Outbound Links',
+            eventAction: 'Retailer Referral',
             eventLabel: $('#brand-name').text(),
         });
     });
