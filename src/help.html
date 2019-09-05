@@ -5,12 +5,15 @@
     <link rel="shortcut icon" type="image/png" href="./images/favicon.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Openpay: Help - We're here for you</title>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TF3JKHF');</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84225706-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-84225706-1');
+    </script>
 
     <!-- 	FullStory Snippet -->
     <script>
@@ -42,7 +45,7 @@
     <a href="business">I'm a business</a>
     <a class="active" href="help">Help & contact</a>
     <div class="topNavRight">
-        <a href="https://retailer.myopenpay.com.au/live/Account/Login/" onclick="ga('send', 'event', 'Outbound', 'Merchant Log in');">Merchant log in</a>
+        <a class="merchant-login-link" href="https://retailer.myopenpay.com.au/live/Account/Login/">Merchant log in</a>
     </div>
 </div>
 <!--hamburger menu-->
@@ -59,7 +62,7 @@
             <a href="business"><li>I'm a business</li></a>
             <a class="active" href="help"><li>Help & contact</li></a>
             <br>
-            <a href="https://retailer.myopenpay.com.au/live/Account/Login/"><li>Merchant log in</li></a>
+            <a class="merchant-login-link" href="https://retailer.myopenpay.com.au/live/Account/Login/"><li>Merchant log in</li></a>
 
         </ul>
     </div>
@@ -200,13 +203,13 @@
                     <img class="iconEmail" src="./images/iconEmail.svg">
                     <h2>Email Us</h2>
                     <p>For non-urgent and general help, contact by email. we'll get back to promptly.</p>
-                    <div class="btnBox"><a href="mailto:info@openpay.com.au" onclick="ga('send', 'event', 'Contact Us', 'Email');">info@openpay.com.au</a></div>
+                    <div class="btnBox"><a href="mailto:info@openpay.com.au" class="contact-mail-link">info@openpay.com.au</a></div>
                 </div>
                 <div class="col-2">
                     <img class="iconPhone" src="./images/iconPhone.svg">
                     <h2>Call Us</h2>
                     <p>If you need urgent assistance, contact one of our friendly support staff to assist you.</p>
-                    <div class="btnBox"><a href="tel:1300168359" onclick="ga('send', 'event', 'Contact Us', 'Phone');">1300 168 359</a></div>
+                    <div class="btnBox"><a href="tel:1300168359" class="contact-mail-phone">1300 168 359</a></div>
                 </div>
                 <div class="clear"></div>
             </div>
@@ -246,10 +249,10 @@
 				</span>
         </div>
         <div class="footerAppWrapper">
-            <a href="https://itunes.apple.com/au/app/openpay/id1166424403?mt=8" onclick="ga('send', 'event', 'App', 'iOS', 'Footer');">
+            <a href="https://itunes.apple.com/au/app/openpay/id1166424403?mt=8" class="ios-app-download">
                 <img class="apple" src="./images/apple.svg">
             </a>
-            <a href="https://play.google.com/store/apps/details?id=com.ocean.openpay" onclick="ga('send', 'event', 'App', 'Android', 'Footer');">
+            <a href="https://play.google.com/store/apps/details?id=com.ocean.openpay" class="android-app-download">
                 <img class="android" src="./images/android.svg">
             </a>
         </div>
@@ -266,11 +269,9 @@
 
     </div>
 </div>
-<script src="scripts/location-bannerr.js"></script>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TF3JKHF"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<script src="scripts/analytic-utils.js"></script>
+<script src="scripts/ga-common.js"></script>
+<script src="scripts/location-banner.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 
@@ -279,6 +280,22 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+
+    $('.contact-mail-link').click(function () {
+        if ('sendEvent' in window) window.sendEvent({
+            eventCategory: 'Outbound Links',
+            eventAction: 'Click',
+            eventLabel: 'Contact by email',
+        });
+    });
+
+    $('.contact-mail-phone').click(function () {
+        if ('sendEvent' in window) window.sendEvent({
+            eventCategory: 'Outbound Links',
+            eventAction: 'Click',
+            eventLabel: 'Contact by phone',
+        });
+    });
 </script>
 </body>
 </html>

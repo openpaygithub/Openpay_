@@ -1,17 +1,5 @@
-function sendEvent(event) {
-    var evt = event || {};
-
-    if ('ga' in window) {
-        ga(function() {
-            var tracker = ga.create('UA-84225706-1', 'auto');
-
-            if (tracker) tracker.send('event', evt.eventCategory, evt.eventAction, evt.eventLabel);
-        });
-    }
-}
-
 function showLocationBanner () {
-    sendEvent({
+    if ('sendEvent' in window) window.sendEvent({
         eventCategory: 'Location Switcher',
         eventAction: 'show',
         eventLabel: 'Location switcher showed'
@@ -41,7 +29,7 @@ function showLocationBanner () {
             document.body.removeChild($banner);
             if (localStorage) localStorage.setItem('openpay-au-location-checked', 'true');
 
-            sendEvent({
+            if ('sendEvent' in window) window.sendEvent({
                 eventCategory: 'Location Switcher',
                 eventAction: 'close',
                 eventLabel: 'Location switcher closed'
@@ -55,7 +43,7 @@ function showLocationBanner () {
     $link.addEventListener('click', function () {
         if (localStorage) localStorage.setItem('openpay-au-location-checked', 'true');
 
-        sendEvent({
+        if ('sendEvent' in window) window.sendEvent({
             eventCategory: 'Location Switcher',
             eventAction: 'redirect',
             eventLabel: 'Location switcher used'
