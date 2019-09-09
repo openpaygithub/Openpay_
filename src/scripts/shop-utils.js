@@ -18,6 +18,8 @@ var openpayUtils = (function () {
 
     var availabilityEnum = ['Online Store', 'In Store', 'Online And In Store'];
 
+    var trackingCode = '?utm_source=openpay&utm_medium=referral&utm_campaign=search';
+
     function parseParams(str) {
         if (str.trim() === '') return {};
 
@@ -324,7 +326,7 @@ var openpayUtils = (function () {
                 $('#locations-count').text(brand.retailerLocations.length);
                 $('#availability').text(availabilityEnum[brand.retailerAvailability]);
                 $('#loader').hide();
-                $('#url').attr('href', brand.url);
+                $('#url').attr('href', brand.url + trackingCode);
                 if (!brand.url) $('#url').hide();
                 $('#featured-brand').show();
                 $('#search-results-heading').show();
@@ -374,9 +376,12 @@ var openpayUtils = (function () {
                 return location.retailerLocationID != params.RetailerID;
             });
 
+            var url = currentRetailer.url || brand.url;
+
             if (!currentRetailer) return console.error('Invalid retailer ID specified');
             $('#map').attr('src', getMapUrl(currentRetailer));
-            $('#url').attr('href', currentRetailer.url);
+            $('#url').attr('href', url + trackingCode);
+            if (!url) $('#url').hide();
             $('#phone').attr('href', ['tel', currentRetailer.phoneNumber].join(':'));
             $('#brand-address').text(getAddress(currentRetailer));
             $('#brand-phone').text(currentRetailer.phoneNumber);
