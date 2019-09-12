@@ -55,4 +55,28 @@ $(document).ready(function () {
     } else {
         $('#search-results').hide();
     }
+
+    $('.french-retailer').click(function () {
+        if ('sendEvent' in window) window.sendEvent({
+            eventCategory: 'Outbound Links',
+            eventAction: 'Featured retailer',
+            eventLabel: 'French connection',
+    });
+    });
+
+    $('.edge-retailer').click(function () {
+        if ('sendEvent' in window) window.sendEvent({
+            eventCategory: 'Outbound Links',
+            eventAction: 'Featured retailer',
+            eventLabel: 'Edge',
+        });
+    });
+
+    $('.bunnings-retailer').click(function () {
+        if ('sendEvent' in window) window.sendEvent({
+            eventCategory: 'Outbound Links',
+            eventAction: 'Featured retailer',
+            eventLabel: 'Bunnings',
+        });
+    });
 });
