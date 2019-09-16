@@ -6,67 +6,72 @@
     <link rel="shortcut icon" type="image/png" href="../images/favicon.png" />
     <title>Openpay - Buy now, Pay Smarter</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84225706-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-84225706-1"
+    ></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
 
-      gtag('config', 'UA-84225706-1');
+      gtag('config', 'UA-84225706-1')
     </script>
     <!-- 	FullStory Snippet -->
     <script>
-      window["_fs_debug"] = false;
-      window["_fs_host"] = "fullstory.com";
-      window["_fs_org"] = "D6N17";
-      window["_fs_namespace"] = "FS";
-      (function(m, n, e, t, l, o, g, y) {
+      window['_fs_debug'] = false
+      window['_fs_host'] = 'fullstory.com'
+      window['_fs_org'] = 'D6N17'
+      window['_fs_namespace'] = 'FS'
+      ;(function(m, n, e, t, l, o, g, y) {
         if (e in m) {
           if (m.console && m.console.log) {
             m.console.log(
               'FullStory namespace conflict. Please set window["_fs_namespace"].'
-            );
+            )
           }
-          return;
+          return
         }
         g = m[e] = function(a, b) {
-          g.q ? g.q.push([a, b]) : g._api(a, b);
-        };
-        g.q = [];
-        o = n.createElement(t);
-        o.async = 1;
-        o.src = "https://" + _fs_host + "/s/fs.js";
-        y = n.getElementsByTagName(t)[0];
-        y.parentNode.insertBefore(o, y);
+          g.q ? g.q.push([a, b]) : g._api(a, b)
+        }
+        g.q = []
+        o = n.createElement(t)
+        o.async = 1
+        o.src = 'https://' + _fs_host + '/s/fs.js'
+        y = n.getElementsByTagName(t)[0]
+        y.parentNode.insertBefore(o, y)
         g.identify = function(i, v) {
           g(l, {
             uid: i
-          });
-          if (v) g(l, v);
-        };
+          })
+          if (v) g(l, v)
+        }
         g.setUserVars = function(v) {
-          g(l, v);
-        };
+          g(l, v)
+        }
         g.shutdown = function() {
-          g("rec", !1);
-        };
+          g('rec', !1)
+        }
         g.restart = function() {
-          g("rec", !0);
-        };
+          g('rec', !0)
+        }
         g.consent = function(a) {
-          g("consent", !arguments.length || a);
-        };
+          g('consent', !arguments.length || a)
+        }
         g.identifyAccount = function(i, v) {
-          o = "account";
-          v = v || {};
-          v.acctId = i;
-          g(o, v);
-        };
-        g.clearUserCookie = function() {};
-      })(window, document, window["_fs_namespace"], "script", "user");
+          o = 'account'
+          v = v || {}
+          v.acctId = i
+          g(o, v)
+        }
+        g.clearUserCookie = function() {}
+      })(window, document, window['_fs_namespace'], 'script', 'user')
     </script>
     <link
-      href="https://fonts.googleapis.com/css?family=Poppins:300,600"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/nav.css" />
@@ -83,7 +88,11 @@
         <a href="../business">I'm a business</a>
         <a href="../help">Help & contact</a>
         <div class="topNavRight">
-          <a class="merchant-login-link" href="https://retailer.myopenpay.com.au/live/Account/Login/">Merchant log in</a>
+          <a
+            class="merchant-login-link"
+            href="https://retailer.myopenpay.com.au/live/Account/Login/"
+            >Merchant log in</a
+          >
         </div>
       </div>
       <!--hamburger menu-->
@@ -108,7 +117,10 @@
               <li>Help & contact</li>
             </a>
             <br />
-            <a class="merchant-login-link" href="https://retailer.myopenpay.com.au/live/Account/Login/">
+            <a
+              class="merchant-login-link"
+              href="https://retailer.myopenpay.com.au/live/Account/Login/"
+            >
               <li>Merchant log in</li>
             </a>
           </ul>
@@ -170,49 +182,77 @@
           </p>
         </div>
       </div>
-      <div class="section budget">
-        <h1>An Openpay plan for every budget</h1>
-        <div class="row budget-options">
-          <div class="col">
-            <div
-              class="budget-option active"
-              id="budget-1"
-              onclick="getBudget(this.id)"
-            >
-              <span>$100-$1000</span>
+
+      <div class="intrigued">
+        <div class="bodyContainer">
+          <div class="accordionWrapper">
+            <div class="innerAccordionWrapper">
+              <h1>An Openpay plan for every budget.</h1>
+
+              <ul>
+                <li>
+                  <input type="checkbox" checked />
+                  <i></i>
+
+                  <h2>$100 - $1000</h2>
+
+                  <div class="accordion__items-wrapper">
+                    <div class="accordion__item">
+                      <p>Pay fortnightly over</p>
+                      <p style="font-weight: bold">2 to 3 months</p>
+                      <p>Establishment fee</p>
+                      <p style="font-weight: bold">None</p>
+                      <p>Plan management fee</p>
+                      <p style="font-weight: bold">None</p>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <input type="checkbox" checked />
+                  <i></i>
+
+                  <h2>$1000 - $3000</h2>
+
+                  <div class="accordion__items-wrapper">
+                    <div class="accordion__item">
+                      <p>Pay fortnightly over</p>
+                      <p style="font-weight: bold">6, 9, 12, 18 & 24 months</p>
+                      <p>Establishment fee</p>
+                      <p style="font-weight: bold">$25</p>
+                      <p>Plan management fee</p>
+                      <p style="font-weight: bold">$2.50</p>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <input type="checkbox" checked />
+                  <i></i>
+
+                  <h2>$3000 - $5000</h2>
+
+                  <div class="accordion__items-wrapper">
+                    <div class="accordion__item">
+                      <p>Pay fortnightly over</p>
+                      <p style="font-weight: bold">6, 9 & 12 months</p>
+                      <p>Establishment fee</p>
+                      <p style="font-weight: bold">$25</p>
+                      <p>Plan management fee</p>
+                      <p style="font-weight: bold">$2.50</p>
+                    </div>
+                    <div class="accordion__item">
+                      <p>Pay fortnightly over</p>
+                      <p style="font-weight: bold">18 & 24 months</p>
+                      <p>Establishment fee</p>
+                      <p style="font-weight: bold">$25</p>
+                      <p>Plan management fee</p>
+                      <p style="font-weight: bold">$3.95</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
-          </div>
-          <div class="col">
-            <div
-              class="budget-option"
-              id="budget-2"
-              onclick="getBudget(this.id)"
-            >
-              <span>$1000-$3000</span>
-            </div>
-          </div>
-          <div class="col">
-            <div
-              class="budget-option"
-              id="budget-3"
-              onclick="getBudget(this.id)"
-            >
-              <span>$3000-$5000</span>
-            </div>
-          </div>
-        </div>
-        <div class="row budget-details">
-          <div class="col">
-            <h2>Pay fortnightly over</h2>
-            <h2 id="fortnightly">2 to 3 months</h2>
-          </div>
-          <div class="col">
-            <h2>Establishment fee</h2>
-            <h2 id="establishment">None</h2>
-          </div>
-          <div class="col">
-            <h2>Plan management fee</h2>
-            <h2 id="plan">None</h2>
           </div>
         </div>
       </div>
@@ -230,7 +270,10 @@
           >
             <img class="apple" src="../images/apple.svg" />
           </a>
-          <a href="https://play.google.com/store/apps/details?id=com.ocean.openpay" class="android-app-download">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.ocean.openpay"
+            class="android-app-download"
+          >
             <img class="android" src="../images/android.svg" />
           </a>
         </div>
@@ -258,7 +301,6 @@
           <a href="business" class="footerNav">I'm a business</a>
           <a href="help" class="footerNav">Help & contact</a>
           <a href="legal" class="footerNav">Legal stuff</a>
-          <!-- <a href="https://brand.openpay.com.au" class="footerNav">Merchant resources</a> -->
         </div>
         <div class="socialLinks">
           <span>
@@ -292,7 +334,10 @@
           >
             <img class="apple" src="../images/apple.svg" />
           </a>
-          <a href="https://play.google.com/store/apps/details?id=com.ocean.openpay" class="android-app-download">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.ocean.openpay"
+            class="android-app-download"
+          >
             <img class="android" src="../images/android.svg" />
           </a>
         </div>
@@ -311,41 +356,5 @@
     <script src="../scripts/analytic-utils.js"></script>
     <script src="../scripts/ga-common.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-      function getBudget(id) {
-        console.log("Budget for : " + id);
-        resetBudgetClasses();
-        setBudgetInfo(id);
-        document.getElementById(id).classList.add("active");
-      }
-
-      function setBudgetInfo(id) {
-        let fortnightly,
-          establishment,
-          plan = "";
-        if (id === "budget-1") {
-          fortnightly = "2 to 3 months";
-          establishment = "None";
-          plan = "None";
-        } else if (id === "budget-2") {
-          fortnightly = "6, 9, 12, 18 & 24 months";
-          establishment = "$25";
-          plan = "$2.50";
-        } else if (id === "budget-3") {
-          fortnightly = "6, 9 & 12 months<br>18 & 24 months";
-          establishment = "$25<br>$25";
-          plan = "$2.50<br>$3.95";
-        }
-        document.getElementById("fortnightly").innerHTML = fortnightly;
-        document.getElementById("establishment").innerHTML = establishment;
-        document.getElementById("plan").innerHTML = plan;
-      }
-
-      function resetBudgetClasses() {
-        document.getElementById("budget-1").className = "budget-option";
-        document.getElementById("budget-2").className = "budget-option";
-        document.getElementById("budget-3").className = "budget-option";
-      }
-    </script>
   </body>
 </html>
