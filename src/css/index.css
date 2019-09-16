@@ -383,6 +383,16 @@ body {
     text-decoration: none;
 }
 
+@media (max-width: 1280px) {
+    #promotion {
+        flex-direction: column;
+    }
+
+    .promo-card {
+        max-width: 360px;
+    }
+}
+
 @media (max-width: 1200px) {
     .heroHomeContainer .heroInfo {
         padding: 120px 50px 0;
@@ -431,14 +441,6 @@ body {
 }
 
 @media (max-width: 768px) {
-
-    #promotion {
-        flex-direction: column;
-    }
-    .promo-card {
-        max-width: 360px;
-    }
-
     .location-banner_ico {
         width: 46px;
     }
