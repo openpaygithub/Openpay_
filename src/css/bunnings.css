@@ -473,40 +473,6 @@ ul li input[type=checkbox]:checked ~ i:after {
     margin: 25px auto 20px;
 }
 
-.kitchens {
-    background: url(../images/bunningsKitchen.jpg);
-    margin: 0;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 400px;
-    align-items: center;
-    top: 0;
-    color: #fff;
-    padding: 80px 30px;
-    text-align: center;
-    height: auto;
-}
-
-.kitchens h1 {
-    color: #38465B;
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 44px;
-    text-align: center;
-}
-
-.kitchens p {
-    max-width: 570px;
-    color: #38465B;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 26px;
-    text-align: center;
-    margin: 25px auto 20px;
-}
-
 .downloadApp .apple {
     height: 40px;
     width: 135px;
