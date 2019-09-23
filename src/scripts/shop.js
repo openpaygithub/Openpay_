@@ -72,11 +72,11 @@ $(document).ready(function () {
         });
     });
 
-    $('.bunnings-retailer').click(function () {
+    $('.esther-retailer').click(function () {
         if ('sendEvent' in window) window.sendEvent({
             eventCategory: 'Outbound Links',
             eventAction: 'Featured retailer',
-            eventLabel: 'Bunnings',
+            eventLabel: 'Esther',
         });
     });
 });
