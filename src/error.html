@@ -1,38 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script>
-			var url = $(location).attr('href');
-			var fixedUrl = fixUrlIssues(url);
-			redirect(fixedUrl);
-		
-			//////////////////////////////////
-			
-			function fixUrlIssues(url) {
-				return stripTrailingSlash(url).toLowerCase();
-			}
-			
-			function stripTrailingSlash(url) {
-				return url.replace(/\/$/, "");
-			}
-			
-			function redirect(url) {
-				var pageName = url.substr(url.lastIndexOf('/') + 1);
-				if(pageName != 'error') {
-					$.ajax({
-						url: url,
-						method: "HEAD"
-					})
-					.done (function() {
-						window.location = url;
-					})
-					.fail (function() {
-						window.location = url.substr(0,url.lastIndexOf('/')) + '/error';
-					});			
-				}
-			}
-			
-	</script>
-</head>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Openpay" content="app-id=1166424403" />
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+    <title>Openpay - Error</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/error.css" />
+  </head>
+
+  <body>
+    <div class="mainContent">
+      <div class="topNav">
+        <a class="mainLogo" href="index"></a>
+        <a href="shop">Shop now</a>
+        <a href="how">How it works</a>
+        <a href="business">I'm a business</a>
+        <a href="help">Help & contact</a>
+        <div class="topNavRight">
+          <a
+            class="merchant-login-link"
+            href="https://retailer.myopenpay.com.au/live/Account/Login/"
+            >Merchant log in</a
+          >
+        </div>
+      </div>
+      <!--hamburger menu-->
+      <nav role="navigation">
+        <a class="mainLogo" href="index"></a>
+        <div id="hamburgerMenu">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul>
+            <li><a href="shop">Shop now</a></li>
+            <li><a href="how">How it works</a></li>
+            <li><a href="business">I'm a business</a></li>
+            <li><a href="help">Help & contact</a></li>
+            <br />
+            <li>
+              <a
+                class="merchant-login-link"
+                href="https://retailer.myopenpay.com.au/live/Account/Login/"
+                >Merchant log in</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="error">
+        <div class="error__copy-wrapper">
+          <h1 class="error__title">404</h1>
+          <h3 class="error__subtitle">We couldn't find this page</h3>
+          <p class="error__description">
+            The link is broken or the page has been moved
+          </p>
+          <div class="btnBox"><a href="/">Back to Homepage</a></div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="footerMenu">
+          <a href="shop" class="footerNav">Shop now</a>
+          <a href="how" class="footerNav">How it works</a>
+          <a href="business" class="footerNav">I'm a business</a>
+          <a href="help" class="footerNav">Help & contact</a>
+          <a href="legal" class="footerNav">Legal stuff</a>
+        </div>
+        <div class="socialLinks">
+          <span>
+            <a href="https://facebook.com/openpayau" class="footer-icon fb">
+              <img src="./images/social/Fb.svg" alt="Facebook" loading="lazy" />
+              Facebook
+            </a>
+            <a href="https://twitter.com/openpay_" class="footer-icon twit">
+              <img src="./images/social/Twitter.svg" alt="Twitter" />
+              Twitter
+            </a>
+          </span>
+          <span>
+            <a
+              href="https://au.linkedin.com/company/open-pay"
+              class="footer-icon linked"
+            >
+              <img src="./images/social/in.svg" alt="LinkedIn" loading="lazy" />
+              LinkedIn
+            </a>
+            <a href="https://www.instagram.com/openpay_" class="footer-icon ig">
+              <img
+                src="./images/social/Insta.svg"
+                alt="Instagram"
+                loading="lazy"
+              />
+              Instagram
+            </a>
+          </span>
+        </div>
+        <div class="footerAppWrapper">
+          <a
+            href="https://itunes.apple.com/au/app/openpay/id1166424403?mt=8"
+            class="ios-app-download"
+          >
+            <img
+              class="apple"
+              src="./images/apple.svg"
+              alt="iOS App"
+              loading="lazy"
+            />
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.ocean.openpay"
+            class="android-app-download"
+          >
+            <img
+              class="android"
+              src="./images/android.svg"
+              alt="Android App"
+              loading="lazy"
+            />
+          </a>
+        </div>
+        <div class="footerMoreLinksMenu">
+          <a href="legal" class="footerNav">Privacy</a>
+          <a href="legal" class="footerNav">Terms & Conditions</a>
+          <a href="legal" class="footerNav">User Licence</a>
+          <a href="legal" class="footerNav">PCI Data Security</a>
+        </div>
+        <p>&#169; Openpay &nbsp; | &nbsp; Made in Melbourne, Australia</p>
+        <a class="whiteLogo" href="index">
+          <img
+            src="./images/openpay_logo_white.svg"
+            alt="Footer Logo"
+            loading="lazy"
+          />
+        </a>
+      </div>
+    </div>
+    <script src="scripts/location-banner.js"></script>
+  </body>
 </html>

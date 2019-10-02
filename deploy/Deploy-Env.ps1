@@ -28,7 +28,7 @@ ForEach ($f in $files)
     aws s3 cp --content-type "text/html" --acl public-read $newfile $hostingBucket/$s3Key
 }
 
-aws s3 sync --delete --acl public-read $dir $hostingBucket
+aws s3 sync --delete --exclude "assets/*" --exclude "tiles/*" --acl public-read $dir $hostingBucket
 
 cd $cwd
 
