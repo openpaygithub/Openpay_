@@ -1,0 +1,45 @@
+.error {
+    background: url('../images/bg404.jpg') no-repeat center;
+    background-size: cover;
+    height: 70vh;
+    max-height: 818px;
+}
+
+.error__copy-wrapper {
+    text-align: center;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error__title {
+    font-size: 120px;
+    opacity: .6;
+}
+
+.error__subtitle {
+    font-size: 32px;
+}
+
+.error__description {
+    font-size: 18px;
+}
+
+.btnBox {
+    background-color: #2864FF;
+    text-align: center;
+    display: inline-block;
+    border-radius: 8px;
+    padding: 10px 10px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.44px;
+}
+
+ .btnBox a {
+    font-weight: 600;
+}
