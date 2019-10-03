@@ -296,7 +296,7 @@ var openpayUtils = (function () {
 
     function getMapUrl(location) {
         var base = 'https://www.google.com/maps/embed/v1/place';
-        var key = 'AIzaSyDXbDVMNsMoFdQM1lK5hZqroj5rdjO5jgY';
+        var key = 'AIzaSyC3j-aR5dYROPzpJaRBmuzuikZ9NpQsQCw';
 
         return [base, '?q=', getFullAdress(location), '&key=', key].join('');
     }
