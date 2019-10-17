@@ -667,6 +667,7 @@ body {
     border: none;
     color: #3C465A;
     font-size: 40px;
+    cursor: pointer;
 }
 
 .owl-prev {
