@@ -654,6 +654,34 @@ body {
     text-align: right;
 }
 
+/* Carousel */
+.retailers__carousel {
+    position: relative;
+}
+
+.owl-prev,
+.owl-next {
+    position: absolute;
+    top: 80px;
+    background: transparent;
+    border: none;
+    color: #3C465A;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.owl-prev {
+    left: -30px;
+}
+
+.owl-next {
+    right: -30px;
+}
+
+.owl-dots {
+    margin-top: 20px;
+}
+
 @keyframes loading {
     0%   {box-shadow: 60px 0 0 0 #00E1B4, 20px 0 0 0 blue, -20px 0 0 0 #2864FF;}
     5%   {box-shadow: 60px 0 0 0 #00E1B4, 20px 0 0 0 blue, -20px 0 0 2px #2864FF;}
@@ -741,5 +769,10 @@ body {
     }
     .switch-view label svg {
         margin-right: 0;
+    }
+
+    .owl-prev,
+    .owl-next {
+        top: 50px;
     }
 }
