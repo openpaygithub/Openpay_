@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800&display=swap");
+@import "./nav.css?20190517";
+
+.hero {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/error/404_bg.jpg);
+  background-image: -webkit-image-set(
+    url(../images/error/404_bg.jpg) 1x,
+    url(../images/error/404_bg@2x.jpg) 2x
+  );
+  background-image: image-set(
+    url(../images/error/404_bg.jpg) 1x,
+    url(../images/error/404_bg@2x.jpg) 2x
+  );
+  width: 100%;
+}
+
+.hero {
+  color: var(--primary-light);
+  padding: 220px 140px;
+}
+
+.hero__title {
+  font-weight: var(--extra-bold);
+  font-size: var(--h1);
+}
+
+.error {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.error__title {
+  font-size: var(--h2);
+  font-weight: var(--semi-bold);
+  padding-bottom: 30px;
+}
+
+.error__text {
+  font-size: 25px;
+  line-height: 40px;
+}
+
+.error__list {
+  list-style: none;
+  padding-top: 50px;
+}
+
+.error__item {
+  padding-bottom: 20px;
+}
+
+.error__link {
+  font-size: 25px;
+  color: var(--link-light);
+  text-decoration: underline;
+}
+
+.error__link:hover {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 880px) {
+  .hero {
+    padding: 15vh 30px;
+    text-align: center;
+    background-position: center;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .error {
+    padding: 100px 20px;
+  }
+}

@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,800&display=swap");
+@import "./nav.css?20190517";
+
+.btn-primary {
+  font-size: 20px;
+  line-height: normal;
+  font-weight: var(--semi-bold);
+  text-align: center;
+  color: var(--primary-dark);
+  width: 100%;
+  max-width: 398px;
+  min-width: 250px;
+  height: 67.53px;
+  background-color: var(--button);
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.btn-primary:hover {
+  opacity: var(--opacity);
+}
+
+.btn-primary:active {
+  bottom: -1px;
+  position: relative;
+}
+
+/*...introduction...*/
+.introduction-wrap {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../images/business/business.jpg);
+  background-image: -webkit-image-set(
+    url(../images/business/business.jpg) 1x,
+    url(../images/business/business@2x.jpg) 2x
+  );
+  background-image: image-set(
+    url(../images/business/business.jpg) 1x,
+    url(../images/business/business@2x.jpg) 2x
+  );
+  max-height: 520px;
+}
+
+.introduction-wrap::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.introduction__title {
+  font-weight: var(--extra-bold);
+  font-size: var(--h1);
+  line-height: 70px;
+  color: var(--primary-light);
+  letter-spacing: 3px;
+  padding: 200px 140px
+}
+ 
+/*...end introduction...*/
+
+.cta-section {
+  background-color: var(--neutral-light);
+  padding: 90px 0;
+  text-align: center;
+}
+
+.cta-section__title {
+  font-size: var(--h2);
+  font-weight: var(--semi-bold);
+  margin-bottom: 30px;
+}
+
+.cta-section__subtitle {
+  max-width: 50vw;
+  font-size: var(--h3);
+  font-weight: var(--light);
+  line-height: 35px;
+  margin: 0 auto 15px;
+}
+
+.cta-section__subtitle--bold {
+  font-weight: var(--semi-bold);
+}
+
+.cta-section__terms {
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 60px;
+}
+
+/*...whyOpenPay...*/
+.whyOpenPay-wrap {
+  background-color: var(--primary-light);
+  padding: 90px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.whyOpenPay-wrap::after {
+  content: "";
+  background: url(../images/general/signup-bg-logo.svg) no-repeat;
+  background-size: cover;
+  width: 583px;
+  height: 610px;
+  position: absolute;
+  bottom: -275px;
+  right: -45px;
+}
+
+.whyOpenPay {
+  margin: 0 auto 65px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.whyOpenPay-title {
+  font-size: var(--h2);
+  font-weight: var(--semi-bold);
+  margin-bottom: 30px;
+}
+
+.whyOpenPay__text {
+  max-width: 85vw;
+  font-size: var(--h3);
+  font-weight: var(--light);
+  line-height: 35px;
+  margin: 0 auto 25px;
+}
+
+.whyOpenPay-btn {
+  padding: 20px 0;
+  max-width: 260px;
+  margin: 0 auto;
+  display: block;
+  z-index: 1;
+  position: relative;
+}
+/*...end whyOpenPay...*/
+
+/*...whatCanWeDo...*/
+.whatCanWeDo-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.whatCanWeDo-section {
+  color: var(--primary-light);
+  text-align: center;
+  padding: 140px 15px 100px;
+  width: 100%;
+}
+
+.whatCanWeDo-section_1 {
+  background-color: var(--secondary-dark);
+}
+
+.whatCanWeDo-section_2 {
+  background-color: var(--secondary-light);
+}
+
+.whatCanWeDo-title {
+  font-weight: var(--semi-bold);
+  font-size: var(--h2);
+  line-height: 40px;
+  padding-bottom: 110px;
+}
+
+.whatCanWeDo-title--row {
+  padding-bottom: 85px;
+}
+
+.whatCanWeDo-item {
+  max-width: 674px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+.whatCanWeDo-item:last-child {
+  padding-bottom: 0;
+}
+
+.whatCanWeDo-item--last {
+  padding-top: 50px;
+}
+
+.whatCanWeDo-item-title {
+  font-weight: var(--semi-bold);
+  font-size: var(--h3);
+  line-height: 41px;
+  padding: 30px 0;
+}
+
+.whatCanWeDo-item-paragraph {
+  font-weight: var(--light);
+  font-size: var(--p);
+  line-height: 30px;
+}
+
+@media (min-width: 961px) and (max-width: 1280px) {
+  .whatCanWeDo-item-paragraph {
+    max-width: 430px;
+    margin: 0 auto;
+  }
+}
+
+/*...end whatCanWeDo...*/
+
+/*...readyToChat...*/
+.readyToChat-wrap {
+  padding: 175px 0 145px;
+  background-color: var(--neutral-light);
+}
+
+.readyToChat {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.readyToChat-title {
+  font-size: var(--h2);
+  font-weight: var(--semi-bold);
+  color: var(--secondary-dark);
+  margin: 0 97px 20px 0;
+  white-space: nowrap;
+}
+
+.readyToChat-btn {
+  padding: 20px 0;
+}
+/*...end readyToChat...*/
+
+@media screen and (max-width: 960px) {
+  .whatCanWeDo-section {
+    padding: 100px 15px 100px;
+  }
+
+  .whatCanWeDo-title {
+    padding-bottom: 70px;
+  }
+
+  .whatCanWeDo-item {
+    padding-bottom: 50px;
+  }
+
+  .whatCanWeDo-item-paragraph {
+    min-height: initial;
+  }
+  .introduction-desc {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .introduction__title {
+    width: 100%;
+    min-width: 200px;
+    line-height: 55px;
+    padding: 15vh 30px;
+  }
+
+  .whatCanWeDo-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .readyToChat {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .readyToChat-title {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 578px) {
+  .whyOpenPay__text,
+  .cta-section__subtitle {
+    max-width: initial;
+  }
+}

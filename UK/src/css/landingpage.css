@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,800i&display=swap');
+@import './nav.css?20190517';
+
+.link-to {
+  line-height: normal;
+  font-weight: var(--semi-bold);
+  text-align: center;
+  color: var(--primary-dark);
+  transition: all 0.1s;
+}
+
+.link-to:hover {
+  opacity: var(--opacity);
+}
+
+.block-child-wrap {
+  max-width: 1650px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/*...welcome block...*/
+.welcome-wrap {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/landingpage/landingpage_bg.jpg);
+  background-image: -webkit-image-set(
+    url(../images/landingpage/landingpage_bg.jpg) 1x,
+    url(../images/landingpage/landingpage_bg@2x.jpg) 2x
+  );
+  background-image: image-set(
+    url(../images/landingpage/landingpage_bg.jpg) 1x,
+    url(../images/landingpage/landingpage_bg@2x.jpg) 2x
+  );
+  padding: 65px 0 60px;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-title {
+  font-size: var(--h1);
+  line-height: 75px;
+  font-weight: var(--extra-bold);
+  color: var(--primary-light);
+  letter-spacing: 3px;
+  padding-top: 20px;
+}
+
+.welcome-logo {
+  max-width: 155px;
+  max-height: 30px;
+}
+/*...end welcome block...*/
+
+/*...signup...*/
+.signup {
+  background: linear-gradient(
+    to right,
+    var(--primary-light) 0%,
+    var(--primary-light) 50%,
+    var(--secondary-dark) 50%,
+    var(--secondary-dark) 100%
+  );
+  position: relative;
+  overflow: hidden;
+  padding: 160px 0 155px;
+}
+
+.signup::after {
+  content: '';
+  background: url(../images/general/signup-bg-logo.svg) no-repeat;
+  width: 476px;
+  height: 498px;
+  z-index: 1;
+  position: absolute;
+  bottom: -200px;
+  right: -75px;
+}
+
+.signup__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.signup__title {
+  font-weight: var(--medium);
+  font-size: var(--h2);
+  line-height: 60px;
+  padding: 50px 15px 0 0;
+}
+
+.signup__subtitle {
+  font-weight: var(--extra-bold);
+  font-style: italic;
+}
+
+.signup__item {
+  max-width: 585px;
+}
+
+.signup__item--form {
+  max-width: 620px;
+  background-color: var(--secondary-dark);
+  justify-self: center;
+  padding-left: 15px;
+}
+
+.signup__form-title {
+  display: block;
+  cursor: pointer;
+  font-weight: var(--medium);
+  font-size: 30px;
+  line-height: 50px;
+  color: var(--primary-light);
+  padding-bottom: 40px;
+}
+
+.signup__form {
+  position: relative;
+  z-index: 2;
+}
+
+.signup__input {
+  font-size: 20px;
+  margin-bottom: 40px;
+  background-color: var(--input-bg);
+  border: none;
+  border-radius: 33px;
+  height: 66px;
+  text-align: left;
+  padding-left: 40px;
+  width: 80%;
+  min-width: 260px;
+}
+
+.signup__input::placeholder {
+  font-size: 20px;
+  font-weight: var(--light);
+}
+
+.signup__submit {
+  display: block;
+  border: none;
+  border-radius: 34px;
+  background-color: var(--button);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: var(--medium);
+  height: 67px;
+  width: 260px;
+  transition: all 0.3s;
+}
+
+.signup__submit:hover {
+  opacity: var(--opacity);
+}
+
+.signup__submit:active {
+  bottom: -1px;
+  position: relative;
+}
+
+.thankyou {
+  display: none;
+  font-weight: var(--semi-bold);
+  font-size: 25px;
+  color: var(--primary-light);
+}
+
+/*...end signup...*/
+
+/*...works...*/
+.works-wrap {
+  padding: 140px 0;
+  background-color: var(--neutral-light);
+}
+
+.works {
+  max-width: 1280px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.works-title {
+  font-weight: var(--bold);
+  font-size: var(--h2);
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.work-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.work-item__icon_2 {
+  padding-top: 13px;
+}
+
+.work-item__icon_3 {
+  padding-top: 15px;
+}
+
+.work-item__title {
+  font-weight: var(--semi-bold);
+  font-size: var(--h3);
+  margin-top: 20px;
+}
+.work-item__desc {
+  font-size: var(--p);
+  line-height: 30px;
+  min-height: 140px;
+  min-width: 240px;
+  max-width: 380px;
+  margin: 15px auto 0;
+}
+
+/*...end works...*/
+/*...empoweringPay...*/
+.empoweringPay-wrap {
+  padding: 65px 0 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.empoweringPay {
+  width: 100%;
+  max-width: 1364px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.empoweringPay-section {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.empoweringPay-title {
+  font-weight: var(--extra-bold);
+  font-size: var(--h2);
+  margin-bottom: 40px;
+}
+
+.empoweringPay__article {
+  margin-bottom: 40px;
+}
+
+.empoweringPay__article:last-child {
+  margin-bottom: 0;
+}
+
+.empoweringPay__article-title {
+  font-weight: var(--semi-bold);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.empoweringPay__text {
+  font-weight: var(--light);
+  font-size: var(--p);
+}
+
+/*...end empoweringPay...*/
+@media screen and (max-width: 1650px) {
+  .signup__item--form {
+    padding-left: 45px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .signup .block-child-wrap {
+    padding: 0;
+  }
+
+  .empoweringPay {
+    padding: 0 15px;
+  }
+
+  .welcome {
+    align-items: center;
+  }
+
+  .welcome-title {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .signup {
+    background: var(--primary-light);
+    padding: 90px 0 0;
+  }
+
+  .signup__wrapper {
+    grid-template-columns: 1fr;
+    grid-row-gap: 50px;
+  }
+
+  .signup__title {
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .signup__item,
+  .signup__item--form {
+    max-width: initial;
+    padding: 0 15px;
+  }
+
+  .signup__item--form {
+    padding: 50px 15px 95px;
+    text-align: center;
+  }
+
+  .signup__input {
+    text-align: center;
+    padding-left: 0px;
+  }
+
+  .signup__submit {
+    margin: 0 auto;
+  }
+
+  .works-wrap {
+    padding: 70px 0;
+  }
+
+  .work-list {
+    grid-template-columns: 1fr;
+    grid-row-gap: 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .welcome.block-child-wrap {
+    padding: 0;
+  }
+}

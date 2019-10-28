@@ -1,0 +1,39 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: "IAM Role for build/deployment"
+Outputs:
+  RoleArn:
+    Value: !Ref "DeployRole"
+Resources:
+  DeployRole:
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action:
+              - sts:AssumeRole
+            Effect: "Allow"
+            Principal:
+              AWS:
+              - "arn:aws:iam::687399096480:user/DeployUser"
+        Version: "2012-10-17"
+      Path: "/"
+      Policies:
+        - PolicyName: "OpenpayWeb-DeployRolePolicy"
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Action:
+                  - s3:ListBucket
+                Effect: "Allow"
+                Resource:
+                  - arn:aws:s3:::www.dev.myopenpay.co.uk
+                  - arn:aws:s3:::www.myopenpay.co.uk
+              - Action:
+                  - s3:GetObject
+                  - s3:PutObject
+                  - s3:PutObjectAcl
+                  - s3:DeleteObject
+                Effect: "Allow"
+                Resource:
+                  - arn:aws:s3:::www.dev.myopenpay.co.uk/*
+                  - arn:aws:s3:::www.myopenpay.co.uk/*
+    Type: "AWS::IAM::Role"

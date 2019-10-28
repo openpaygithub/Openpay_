@@ -1,0 +1,18 @@
+Description: >
+
+    This template deploys base resources for OpenpayWebUK
+
+Resources:
+
+    DeployRole:
+        Type: AWS::CloudFormation::Stack
+        Properties:
+            TemplateURL: ./DeployRole.yaml
+                
+    
+Outputs:
+  DeployRole:
+    Description: DeployRole
+    Value: !GetAtt DeployRole.Outputs.RoleArn
+    Export:
+      Name: !Sub "${AWS::StackName}-DeployRole"
